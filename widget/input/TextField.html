@@ -1,0 +1,1139 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>TextField(输入框) · Flutter</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Sam Lau">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-local-video/video-js.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Form.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    
+    
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Widget</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Widget
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../basic/">
+            
+                <a href="../basic/">
+            
+                    
+                    基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1.1" data-path="../basic/MaterialApp.html">
+            
+                <a href="../basic/MaterialApp.html">
+            
+                    
+                    MaterialApp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.2" data-path="../basic/Scaffold.html">
+            
+                <a href="../basic/Scaffold.html">
+            
+                    
+                    Scaffold(脚手架)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.3" data-path="../basic/Navigator.html">
+            
+                <a href="../basic/Navigator.html">
+            
+                    
+                    Navigator(顶部导航)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.4" data-path="../basic/BottomNavigationBar.html">
+            
+                <a href="../basic/BottomNavigationBar.html">
+            
+                    
+                    BottomNavigationBar(底部导航栏)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.5" data-path="../basic/AppBar.html">
+            
+                <a href="../basic/AppBar.html">
+            
+                    
+                    AppBar(导航栏)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.6" data-path="../basic/TabBar.html">
+            
+                <a href="../basic/TabBar.html">
+            
+                    
+                    TabBar(水平选项卡)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.7" data-path="../basic/Drawer.html">
+            
+                <a href="../basic/Drawer.html">
+            
+                    
+                    Drawer(抽屉)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.8" data-path="../basic/ExpansionPanel.html">
+            
+                <a href="../basic/ExpansionPanel.html">
+            
+                    
+                    ExpansionPanel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.9" data-path="../basic/Card.html">
+            
+                <a href="../basic/Card.html">
+            
+                    
+                    Card(卡片组件)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.1.10" data-path="../basic/ThemeData.html">
+            
+                <a href="../basic/ThemeData.html">
+            
+                    
+                    ThemeData
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../button/">
+            
+                <a href="../button/">
+            
+                    
+                    按钮
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.2.1" data-path="../button/FloatingActionButton.html">
+            
+                <a href="../button/FloatingActionButton.html">
+            
+                    
+                    FloatingActionButton(悬停按钮)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.2" data-path="../button/FlatButton.html">
+            
+                <a href="../button/FlatButton.html">
+            
+                    
+                    FlatButton(扁平按钮组件)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.3" data-path="../button/PopupMenuButton.html">
+            
+                <a href="../button/PopupMenuButton.html">
+            
+                    
+                    PopupMenuButton(弹出菜单组件)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.4" data-path="../dialog/Chip.html">
+            
+                <a href="../dialog/Chip.html">
+            
+                    
+                    Chip
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2.5" data-path="../button/CheckboxListTile.html">
+            
+                <a href="../button/CheckboxListTile.html">
+            
+                    
+                    CheckboxListTile(复选框)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../dialog/">
+            
+                <a href="../dialog/">
+            
+                    
+                    弹窗
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.3.1" data-path="../dialog/SimpleDialog.html">
+            
+                <a href="../dialog/SimpleDialog.html">
+            
+                    
+                    SimpleDialog(简单对话框组件)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3.2" data-path="../dialog/AlertDialog.html">
+            
+                <a href="../dialog/AlertDialog.html">
+            
+                    
+                    AlertDialog(提示对话框组件)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3.3" data-path="../dialog/BottomSheet.html">
+            
+                <a href="../dialog/BottomSheet.html">
+            
+                    
+                    BottomSheet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3.4" data-path="../dialog/SnackBar.html">
+            
+                <a href="../dialog/SnackBar.html">
+            
+                    
+                    SnackBar
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    输入
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="2.1.4.1" data-path="TextField.html">
+            
+                <a href="TextField.html">
+            
+                    
+                    TextField(输入框)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4.2" data-path="Form.html">
+            
+                <a href="Form.html">
+            
+                    
+                    Form(表格)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../table/">
+            
+                <a href="../table/">
+            
+                    
+                    表格
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.5.1" data-path="../table/DataTable.html">
+            
+                <a href="../table/DataTable.html">
+            
+                    
+                    DataTable
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="../layout/">
+            
+                <a href="../layout/">
+            
+                    
+                    布局
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.6.1" data-path="../layout/Align.html">
+            
+                <a href="../layout/Align.html">
+            
+                    
+                    Align(对齐布局)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6.2" data-path="../layout/AspectRatio.html">
+            
+                <a href="../layout/AspectRatio.html">
+            
+                    
+                    AspectRatio(调整宽高比)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6.3" data-path="../layout/Baseline.html">
+            
+                <a href="../layout/Baseline.html">
+            
+                    
+                    Baseline(基准线)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6.4" data-path="../layout/Center.html">
+            
+                <a href="../layout/Center.html">
+            
+                    
+                    Center(居中)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6.5" data-path="../layout/Column.html">
+            
+                <a href="../layout/Column.html">
+            
+                    
+                    Column(垂直)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6.6" data-path="../layout/Row.html">
+            
+                <a href="../layout/Row.html">
+            
+                    
+                    Row(水平)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6.7" data-path="../layout/ConstrainedBox.html">
+            
+                <a href="../layout/ConstrainedBox.html">
+            
+                    
+                    ConstrainedBox(限定最大最小宽度)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6.8" data-path="../layout/Container.html">
+            
+                <a href="../layout/Container.html">
+            
+                    
+                    Container(容器)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6.9" data-path="../layout/Expanded.html">
+            
+                <a href="../layout/Expanded.html">
+            
+                    
+                    Expanded(填充)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6.10" data-path="../layout/FittedBox.html">
+            
+                <a href="../layout/FittedBox.html">
+            
+                    
+                    FittedBox(缩放)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6.11" data-path="../layout/FractionallySizedBox.html">
+            
+                <a href="../layout/FractionallySizedBox.html">
+            
+                    
+                    FractionallySizedBox(百分比)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6.12" data-path="../layout/LimitedBox.html">
+            
+                <a href="../layout/LimitedBox.html">
+            
+                    
+                    LimitedBox(限定最大宽高)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6.13" data-path="../layout/Offstage.html">
+            
+                <a href="../layout/Offstage.html">
+            
+                    
+                    Offstage(控制是否显示)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6.14" data-path="../layout/OverflowBox.html">
+            
+                <a href="../layout/OverflowBox.html">
+            
+                    
+                    OverflowBox(溢出父容器显示)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6.15" data-path="../layout/Padding.html">
+            
+                <a href="../layout/Padding.html">
+            
+                    
+                    Padding(填充)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6.16" data-path="../layout/SizedBox.html">
+            
+                <a href="../layout/SizedBox.html">
+            
+                    
+                    SizedBox(设置具体尺寸)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6.17" data-path="../layout/Transform.html">
+            
+                <a href="../layout/Transform.html">
+            
+                    
+                    Transform(矩阵转换)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6.18" data-path="../layout/GridView.html">
+            
+                <a href="../layout/GridView.html">
+            
+                    
+                    GridView(网格列表)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6.19" data-path="../layout/IndexedStack.html">
+            
+                <a href="../layout/IndexedStack.html">
+            
+                    
+                    IndexedStack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6.20" data-path="../layout/LayoutBuilder.html">
+            
+                <a href="../layout/LayoutBuilder.html">
+            
+                    
+                    LayoutBuilder(布局构造器)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6.21" data-path="../layout/ListView.html">
+            
+                <a href="../layout/ListView.html">
+            
+                    
+                    ListView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6.22" data-path="../layout/Stack.html">
+            
+                <a href="../layout/Stack.html">
+            
+                    
+                    Stack(栈)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6.23" data-path="../layout/Wrap.html">
+            
+                <a href="../layout/Wrap.html">
+            
+                    
+                    Wrap(宽高自动换行)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6.24" data-path="../layout/Flexible.html">
+            
+                <a href="../layout/Flexible.html">
+            
+                    
+                    Flexible(自适应)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >TextField(输入框)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#textfield&#x8F93;&#x5165;&#x6846;"><b>1. </b>TextField(&#x8F93;&#x5165;&#x6846;)</a></li></ul></div><a href="#textfield&#x8F93;&#x5165;&#x6846;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="textfield&#x8F93;&#x5165;&#x6846;"><a name="textfield&#x8F93;&#x5165;&#x6846;" class="plugin-anchor" href="#textfield&#x8F93;&#x5165;&#x6846;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="textfield&#x8F93;&#x5165;&#x6846;" class="anchor-navigation-ex-anchor" href="#textfield&#x8F93;&#x5165;&#x6846;"><i class="fa fa-link" aria-hidden="true"></i></a>1. TextField(&#x8F93;&#x5165;&#x6846;)</h1>
+<ul>
+<li><a href="https://api.flutter.dev/flutter/material/TextFormField-class.html" target="_blank">TextFormField</a></li>
+<li><a href="https://api.flutter.dev/flutter/widgets/Form-class.html" target="_blank">Form</a></li>
+<li><a href="https://github.com/flutter/flutter/blob/8de07d5527bcdc6b02e43e8efed19219a84bf82e/packages/flutter/test/material/text_field_test.dart" target="_blank">&#x53EF;&#x4EE5;&#x4ECE;flutter &#x5B98;&#x65B9;&#x6D4B;&#x8BD5;&#x6587;&#x4EF6;&#x4E2D;&#x627E;&#x5230;Demo</a></li>
+<li><a href="https://flutter.dev/docs/cookbook/forms/text-field-changes#2-use-a-texteditingcontroller" target="_blank">&#x4F7F;&#x7528;TextEditingController</a></li>
+<li><a href="https://codepen.io/samlau7245/pen/QWjVmqM" target="_blank">CodePen&#x793A;&#x4F8B;</a></li>
+</ul>
+<pre><code class="lang-dart"><span class="hljs-keyword">const</span> TextField({
+  Key key,
+  <span class="hljs-keyword">this</span>.controller, <span class="hljs-comment">// &#x63A7;&#x5236;&#x5668;</span>
+  <span class="hljs-keyword">this</span>.focusNode,   <span class="hljs-comment">// &#x8F7B;&#x6309;&#x6309;&#x94AE;&#x65F6;&#x4F7F;&#x6587;&#x672C;&#x5B57;&#x6BB5;&#x805A;&#x7126;,@see: https://flutter.dev/docs/cookbook/forms/focus                                             </span>
+  <span class="hljs-keyword">this</span>.decoration = <span class="hljs-keyword">const</span> InputDecoration(),<span class="hljs-comment">//&#x6837;&#x5F0F;                                            </span>
+  TextInputType keyboardType,                                            
+  <span class="hljs-keyword">this</span>.textInputAction,                                            
+  <span class="hljs-keyword">this</span>.textCapitalization = TextCapitalization.none,                                            
+  <span class="hljs-keyword">this</span>.style, <span class="hljs-comment">//&#x7C7B;&#x578B;                                            </span>
+  <span class="hljs-keyword">this</span>.strutStyle,                                            
+  <span class="hljs-keyword">this</span>.textAlign = TextAlign.start,                                            
+  <span class="hljs-keyword">this</span>.textAlignVertical,                                            
+  <span class="hljs-keyword">this</span>.textDirection,                                            
+  <span class="hljs-keyword">this</span>.readOnly = <span class="hljs-keyword">false</span>,                                            
+  ToolbarOptions toolbarOptions,                                            
+  <span class="hljs-keyword">this</span>.showCursor,                                          <span class="hljs-comment">// &#x5149;&#x6807;&#x8BBE;&#x7F6E;                                            </span>
+  <span class="hljs-keyword">this</span>.autofocus = <span class="hljs-keyword">false</span>,     <span class="hljs-comment">// &#x7ACB;&#x5373;&#x805A;&#x7126;&#x6587;&#x672C;&#x5B57;&#x6BB5;,@see: https://flutter.dev/docs/cookbook/forms/focus                                  </span>
+  <span class="hljs-keyword">this</span>.obscureText = <span class="hljs-keyword">false</span>,                                            
+  <span class="hljs-keyword">this</span>.autocorrect = <span class="hljs-keyword">true</span>,                                            
+  SmartDashesType smartDashesType,                                            
+  SmartQuotesType smartQuotesType,                                            
+  <span class="hljs-keyword">this</span>.enableSuggestions = <span class="hljs-keyword">true</span>,                                            
+  <span class="hljs-keyword">this</span>.maxLines = <span class="hljs-number">1</span>,<span class="hljs-comment">// &#x884C;&#x6570;&#x9650;&#x5236;                                           </span>
+  <span class="hljs-keyword">this</span>.minLines,<span class="hljs-comment">// &#x884C;&#x6570;&#x9650;&#x5236;                                           </span>
+  <span class="hljs-keyword">this</span>.expands = <span class="hljs-keyword">false</span>,                                            
+  <span class="hljs-keyword">this</span>.maxLength,                                            
+  <span class="hljs-keyword">this</span>.maxLengthEnforced = <span class="hljs-keyword">true</span>,                                            
+  <span class="hljs-keyword">this</span>.onChanged, <span class="hljs-comment">// &#x8F93;&#x5165;&#x76D1;&#x542C;&#x56DE;&#x8C03;                                            </span>
+  <span class="hljs-keyword">this</span>.onEditingComplete, <span class="hljs-comment">// &#x8F93;&#x5165;&#x76D1;&#x542C;&#x56DE;&#x8C03;                                            </span>
+  <span class="hljs-keyword">this</span>.onSubmitted, <span class="hljs-comment">// &#x8F93;&#x5165;&#x76D1;&#x542C;&#x56DE;&#x8C03;                                            </span>
+  <span class="hljs-keyword">this</span>.inputFormatters,                                            
+  <span class="hljs-keyword">this</span>.enabled,                                            
+  <span class="hljs-keyword">this</span>.cursorWidth = <span class="hljs-number">2.0</span>,                                    <span class="hljs-comment">// &#x5149;&#x6807;&#x8BBE;&#x7F6E;</span>
+  <span class="hljs-keyword">this</span>.cursorRadius,                                         <span class="hljs-comment">// &#x5149;&#x6807;&#x8BBE;&#x7F6E;</span>
+  <span class="hljs-keyword">this</span>.cursorColor,                                          <span class="hljs-comment">// &#x5149;&#x6807;&#x8BBE;&#x7F6E;</span>
+  <span class="hljs-keyword">this</span>.selectionHeightStyle = ui.BoxHeightStyle.tight,                                            
+  <span class="hljs-keyword">this</span>.selectionWidthStyle = ui.BoxWidthStyle.tight,                                            
+  <span class="hljs-keyword">this</span>.keyboardAppearance,                                            
+  <span class="hljs-keyword">this</span>.scrollPadding = <span class="hljs-keyword">const</span> EdgeInsets.all(<span class="hljs-number">20.0</span>),                                            
+  <span class="hljs-keyword">this</span>.dragStartBehavior = DragStartBehavior.start,                                            
+  <span class="hljs-keyword">this</span>.enableInteractiveSelection = <span class="hljs-keyword">true</span>,                                            
+  <span class="hljs-keyword">this</span>.onTap,                                            
+  <span class="hljs-keyword">this</span>.buildCounter,                                            
+  <span class="hljs-keyword">this</span>.scrollController,                                            
+  <span class="hljs-keyword">this</span>.scrollPhysics,                                            
+});
+
+<span class="hljs-comment">// &#x5176;&#x4E2D; `this.decoration = const InputDecoration()` &#x63A7;&#x5236;&#x7EC4;&#x4EF6;&#x7684;&#x6837;&#x5F0F;&#xFF0C;&#x6784;&#x9020;&#x51FD;&#x6570;&#x4E3A;&#xFF1A;</span>
+
+<span class="hljs-keyword">const</span> InputDecoration({
+  <span class="hljs-keyword">this</span>.icon,
+  <span class="hljs-keyword">this</span>.labelText,
+  <span class="hljs-keyword">this</span>.labelStyle,
+  <span class="hljs-keyword">this</span>.helperText,
+  <span class="hljs-keyword">this</span>.helperStyle,
+  <span class="hljs-keyword">this</span>.helperMaxLines,
+  <span class="hljs-keyword">this</span>.hintText,
+  <span class="hljs-keyword">this</span>.hintStyle,
+  <span class="hljs-keyword">this</span>.hintMaxLines,
+  <span class="hljs-keyword">this</span>.errorText,
+  <span class="hljs-keyword">this</span>.errorStyle,
+  <span class="hljs-keyword">this</span>.errorMaxLines,
+  <span class="hljs-meta">@Deprecated</span>(
+    <span class="hljs-string">&apos;Use floatingLabelBehaviour instead. &apos;</span>
+    <span class="hljs-string">&apos;This feature was deprecated after v1.13.2.&apos;</span>
+  )
+  <span class="hljs-keyword">this</span>.hasFloatingPlaceholder = <span class="hljs-keyword">true</span>, <span class="hljs-comment">// ignore: deprecated_member_use_from_same_package</span>
+  <span class="hljs-keyword">this</span>.floatingLabelBehavior = FloatingLabelBehavior.auto,
+  <span class="hljs-keyword">this</span>.isDense,
+  <span class="hljs-keyword">this</span>.contentPadding,
+  <span class="hljs-keyword">this</span>.prefixIcon,
+  <span class="hljs-keyword">this</span>.prefixIconConstraints,
+  <span class="hljs-keyword">this</span>.prefix,
+  <span class="hljs-keyword">this</span>.prefixText,
+  <span class="hljs-keyword">this</span>.prefixStyle,
+  <span class="hljs-keyword">this</span>.suffixIcon,
+  <span class="hljs-keyword">this</span>.suffix,
+  <span class="hljs-keyword">this</span>.suffixText,
+  <span class="hljs-keyword">this</span>.suffixStyle,
+  <span class="hljs-keyword">this</span>.suffixIconConstraints,
+  <span class="hljs-keyword">this</span>.counter,
+  <span class="hljs-keyword">this</span>.counterText,
+  <span class="hljs-keyword">this</span>.counterStyle,
+  <span class="hljs-keyword">this</span>.filled,
+  <span class="hljs-keyword">this</span>.fillColor,
+  <span class="hljs-keyword">this</span>.focusColor,
+  <span class="hljs-keyword">this</span>.hoverColor,
+  <span class="hljs-keyword">this</span>.errorBorder,
+  <span class="hljs-keyword">this</span>.focusedBorder,
+  <span class="hljs-keyword">this</span>.focusedErrorBorder,
+  <span class="hljs-keyword">this</span>.disabledBorder,
+  <span class="hljs-keyword">this</span>.enabledBorder,
+  <span class="hljs-keyword">this</span>.border,
+  <span class="hljs-keyword">this</span>.enabled = <span class="hljs-keyword">true</span>,
+  <span class="hljs-keyword">this</span>.semanticCounterText,
+  <span class="hljs-keyword">this</span>.alignLabelWithHint,
+})
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 输入">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Form.html" class="navigation navigation-next " aria-label="Next page: Form(表格)">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"TextField(输入框)","level":"2.1.4.1","depth":3,"next":{"title":"Form(表格)","level":"2.1.4.2","depth":3,"path":"widget/input/Form.md","ref":"widget/input/Form.md","articles":[]},"previous":{"title":"输入","level":"2.1.4","depth":2,"path":"widget/input/README.md","ref":"widget/input/README.md","articles":[{"title":"TextField(输入框)","level":"2.1.4.1","depth":3,"path":"widget/input/TextField.md","ref":"widget/input/TextField.md","articles":[]},{"title":"Form(表格)","level":"2.1.4.2","depth":3,"path":"widget/input/Form.md","ref":"widget/input/Form.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["simple-page-toc","anchor-navigation-ex","-lunr","-search","search-plus","advanced-emoji","splitter","expandable-chapters-small","local-video","anchors","copy-code-button","alerts","include-csv","include-codeblock","ace","favicon","todo","emphasize","disqus"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"include-csv":{},"disqus":{"useIdentifier":false,"shortName":"samLau-Hua"},"emphasize":{},"ace":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"todo":{},"splitter":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"showLevel":true,"showGoTop":true,"favicon":{"shortcut":"assets/images/favicon.ico","bookmark":"assets/images/favicon.ico","appleTouch":"assets/images/favicon.ico","appleTouchMore":{"120x120":"assets/images/favicon.ico","180x180":"assets/images/favicon.ico"}},"printLog":false,"multipleH1":true,"associatedWithSummary":true,"include-codeblock":{"template":"ace"},"float":{"floatIcon":"fa fa-navicon","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false}},"favicon":{},"alerts":{},"expandable-chapters-small":{},"local-video":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"search-plus":{}},"theme":"default","author":"Sam Lau","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Flutter","language":"zh-hans","gitbook":"*","description":"记录学习Flutter的知识点！"},"file":{"path":"widget/input/TextField.md","mtime":"2020-06-27T10:18:35.509Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-27T15:37:04.253Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-local-video/video.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
