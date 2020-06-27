@@ -8,3 +8,7 @@
 
 
 [Flutter 仓库地址](https://gitee.com/sam_flutter/flutter_demo.git)
+
+* [Flutter关于布局的示例](https://github.com/cfug/flutter.cn/tree/master/examples/layout)
+* [Flutter Gallery 应用](https://flutter.github.io/gallery/#/)
+* [布局构造](https://flutter.cn/docs/development/ui/layout#sidenav-3-1-2)
