@@ -31,3 +31,5 @@
 # 资料
 
 * [flutter.dev-Navigator Class](https://api.flutter.dev/flutter/widgets/Navigator-class.html)
+* [Navigator operation requested with a context that does not include a Navigator
+](https://stackoverflow.com/questions/44004451/navigator-operation-requested-with-a-context-that-does-not-include-a-navigator)
