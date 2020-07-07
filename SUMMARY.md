@@ -5,6 +5,8 @@
 ## 教程
 
 * [命令行](/CommandLine.md)
+* [测试与调试](/test/README.md)
+	* [DevTools](/test/DevTools.md)
 
 ## Widget
 
