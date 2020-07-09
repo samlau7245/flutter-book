@@ -7,3 +7,7 @@
 # 资料
 
 * [谷歌开发者-Flutter 和桌面应用的最新进展](https://mp.weixin.qq.com/s/AfgT7jqv4m0YjFRIF5HhbA)
+* [闲鱼团队技术博客 Flutter 专题](https://www.yuque.com/xytech/flutter/)
+* [知乎 Flutter 精华讨论](https://www.zhihu.com/topic/20172123/top-answers)
+* [思否社区 Flutter 技术问答](https://segmentfault.com/t/flutter)
+* [掘金社区 Flutter 专栏](https://juejin.im/tag/Flutter)

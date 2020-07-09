@@ -1,19 +1,32 @@
 
-# Row(水平布局)
-Row(水平布局) 用来完成子组件在水平方向的排列。
+* [Row class](https://api.flutter.dev/flutter/widgets/Row-class.html)
 
-<img src="/assets/images/flutter/74.png" width = "50%" height = "50%"/>
+# 构造函数
 
-<img src="/assets/images/flutter/75.png" width = "50%" height = "50%"/>
+```dart
+Row({
+  Key key,
+  MainAxisAlignment mainAxisAlignment = MainAxisAlignment.start,
+  MainAxisSize mainAxisSize = MainAxisSize.max,
+  CrossAxisAlignment crossAxisAlignment = CrossAxisAlignment.center,
+  TextDirection textDirection,
+  VerticalDirection verticalDirection = VerticalDirection.down,
+  TextBaseline textBaseline,
+  List<Widget> children = const <Widget>[],
+})
+```
 
-|属性|值|描述|
-| --- | --- | --- | --- |
-|mainAxisAlignment|MainAxisAlignment|主轴的排列方式|
-|crossAxisAlignment|CrossAxisAlignment|次轴的排列方式|
-|mainAxisSize|MainAxisSize|主轴应该占据多少空间。取值max为最大，min为最小。|
-|children|`List<Widget>`||
+> **[info] 构造函数中的参数含义**
+>
+> 可以参数`Column`布局。
 
-<img src="/assets/images/flutter/76.png" width = "50%" height = "50%"/>
+<img src="/assets/images/flutter/74.png" />
+
+<img src="/assets/images/flutter/75.png" />
+
+<img src="/assets/images/flutter/76.png" />
+
+# 示例
 
 ```dart
 import 'package:flutter/material.dart';
@@ -72,4 +85,4 @@ class MyApp extends StatelessWidget {
 
 ```
 
-<img src="/assets/images/flutter/32.png" width = "25%" height = "25%"/>
+<img src="/assets/images/flutter/32.png"/>
