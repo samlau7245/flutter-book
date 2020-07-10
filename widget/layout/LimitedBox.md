@@ -1,12 +1,20 @@
 
-# LimitedBox(限定最大宽高布局)
+* [LimitedBox class](https://api.flutter.dev/flutter/widgets/LimitedBox-class.html) : 限定最大宽高布局
 
-`LimitedBox`和`ConstrainedBox`组件类似。只不过`LimitedBox`没有最小宽高限制。
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uVki2CIzBTs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-|属性|类型|描述|
-| --- | --- | --- |
-|maxWidth|double|最大宽度|
-|maxHeight|double|最大高度|
+# 构造函数
+
+```dart
+const LimitedBox({
+  Key key,
+  double maxWidth: double.infinity, // 最大宽度
+  double maxHeight: double.infinity, // 最大高度
+  Widget child
+})
+```
+
+# 示例
 
 ```dart
 import 'package:flutter/material.dart';

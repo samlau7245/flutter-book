@@ -1,6 +1,8 @@
 
 * [Align class](https://api.flutter.dev/flutter/widgets/Align-class.html)：将子组件按照指定的方式对齐，并且根据子组件的大小调整自己的大小。
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/g2E7yl3MwMk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 # 构造函数
 
 ```dart
@@ -12,6 +14,8 @@ const Align({
   Widget child
 })
 ```
+
+> `Align`需要再`Stack`中使用
 
 # 示例
 

@@ -1,17 +1,24 @@
 
-# OverflowBox 溢出父容器显示
-`OverflowBox` 组件运行子元素`child`超出父容器的显示范围。
+* [OverflowBox class](https://api.flutter.dev/flutter/widgets/OverflowBox-class.html)
+
+# 构造函数
+
+```dart
+const OverflowBox({
+  Key key,
+  AlignmentGeometry alignment: Alignment.center,
+  double minWidth, // 允许 child 的最小宽度。如果 child 宽度小于这个值，则按照最小宽度进行显示
+  double maxWidth, // 允许 child 的最大宽度。如果 child 宽度大于这个值，则按照最大宽度进行显示
+  double minHeight, // 允许 child 的最小高度。如果 child 宽度小于这个值，则按照最小高度进行显示
+  double maxHeight, // 允许 child 的最大高度。如果 child 宽度大于这个值，则按照最大高度进行显示
+  Widget child
+})
+```
 
 * 当`OverflowBox`的最大尺寸大于`child`的时候，`child`可以完整显示。
 * 当`OverflowBox`的最大尺寸小于`child`的时候，则以最大尺寸为基准，当然这个尺寸是可以突破父节点的。
 
-|属性|类型|描述|
-| --- | --- | --- |
-|alignment|AlignmentGeometry||
-|minWidth|double|允许 child 的最小宽度。如果 child 宽度小于这个值，则按照最小宽度进行显示|
-|maxWidth|double|允许 child 的最大宽度。如果 child 宽度大于这个值，则按照最大宽度进行显示|
-|minHeight|double|允许 child 的最小高度。如果 child 宽度小于这个值，则按照最小高度进行显示|
-|maxHeight|double|允许 child 的最小高度。如果 child 宽度小于这个值，则按照最小高度进行显示|
+# 示例
 
 ```dart
 import 'package:flutter/material.dart';

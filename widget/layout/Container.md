@@ -1,11 +1,29 @@
 
-# Container(基础布局)
+[Container class](https://api.flutter.dev/flutter/widgets/Container-class.html)
 
 Container(基础布局)是一个组合的 Widget 。类似于HTML中的`<span>`标签，用于组合其他的 Widget 。
 
-* [Container (Flutter Widget of the Week)](https://www.youtube.com/watch?v=c1xLMaTUWCY)
-* [CodePen-ContainerExample,搭配视频讲解看](https://codepen.io/samlau7245/pen/xxwYMwN)
-* [Container class](https://api.flutter.dev/flutter/widgets/Container-class.html)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/c1xLMaTUWCY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+# 构造函数
+
+```dart
+Container({
+  Key key,
+  AlignmentGeometry alignment,
+  EdgeInsetsGeometry padding,
+  Color color,
+  Decoration decoration,
+  Decoration foregroundDecoration,
+  double width,
+  double height,
+  BoxConstraints constraints,
+  EdgeInsetsGeometry margin,
+  Matrix4 transform,
+  Widget child,
+  Clip clipBehavior: Clip.none
+)}
+```
 
 | 属性 | 类型 | 说明 |
 | --- | --- | --- |
@@ -21,6 +39,8 @@ Container(基础布局)是一个组合的 Widget 。类似于HTML中的`<span>`�
 |constraints | [BoxConstraints](https://api.flutter.dev/flutter/widgets/Container-class.html) |添加到 child上额外的约束条件|
 |transform  | [Matrix4](https://api.flutter.dev/flutter/vector_math_64/Matrix4-class.html)|设置 Container 的变换矩阵，类型为 Matrix4|
 |child | Widget|Container 中的内容 Widget|
+
+# 示例
 
 ```dart
 import 'package:flutter/material.dart';

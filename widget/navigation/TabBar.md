@@ -1,3 +1,29 @@
+
+[TabBar Class](https://api.flutter.dev/flutter/material/TabBar-class.html)
+
+# 构造函数
+
+```dart
+const TabBar({
+  Key key,
+  @required List<Widget> tabs,
+  TabController controller, // 如果 TabController 没有提供，那默认会使用 DefaultTabController
+  bool isScrollable: false,
+  Color indicatorColor,
+  double indicatorWeight: 2.0,
+  EdgeInsetsGeometry indicatorPadding: EdgeInsets.zero,
+  Decoration indicator,
+  TabBarIndicatorSize indicatorSize,
+  Color labelColor,
+  TextStyle labelStyle,
+  EdgeInsetsGeometry labelPadding,
+  Color unselectedLabelColor,
+  TextStyle unselectedLabelStyle,
+  DragStartBehavior dragStartBehavior: DragStartBehavior.start,
+  ValueChanged<int> onTap
+})
+```
+
 # [TabBar(水平选项卡及视图组件)](https://api.flutter.dev/flutter/material/TabBar-class.html)
 `TabBar`通常需要配套Tab选项组件以及`TabBarView`页面视图组件一起使用。
 

@@ -1,15 +1,36 @@
-# [Scaffold(脚手架组件)](https://api.flutter.dev/flutter/material/Scaffold-class.html)
 
-|属性|类型|说明|
-| --- | --- | --- |
-|appBar|AppBar|显示在界面顶部的一个AppBar|
-|body|Widget|当前界面所显示的主要内容|
-|floatingActionButton|Widget|Material Design中定义的一个功能按钮|
-|persistentFooterButtons|List<Widget>|固定在下方显示的按钮|
-|drawer|Widget|侧边栏组件|
-|botlomNavigationBar|Widget|显示在底部的导航栏按钮栏|
-|backgroundcolor|Color|背景颜色|
-|resizeToAvoidBottomPadding| bool|控制界面内容`body`是否重新布局来避免底部被覆盖,比如当键盘显示时,重新布局避免被键盘盖住内容。默认值为`true`|
+[Scaffold Class](https://api.flutter.dev/flutter/material/Scaffold-class.html)
+
+# 构造函数
+
+```dart
+const Scaffold({
+  Key key,
+  PreferredSizeWidget appBar, // 显示在界面顶部的一个AppBar
+  Widget body, // 当前界面所显示的主要内容
+  
+  Widget floatingActionButton, // Material Design中定义的一个功能按钮
+  FloatingActionButtonLocation floatingActionButtonLocation,
+  FloatingActionButtonAnimator floatingActionButtonAnimator,
+  
+  List<Widget> persistentFooterButtons, // 固定在下方显示的按钮
+  Widget drawer, // 侧边栏组件
+  Widget endDrawer,
+  Widget bottomNavigationBar, // 显示在底部的导航栏按钮栏
+  Widget bottomSheet,
+  Color backgroundColor, // 背景颜色
+  bool resizeToAvoidBottomPadding, // 控制界面内容`body`是否重新布局来避免底部被覆盖,比如当键盘显示时,重新布局避免被键盘盖住内容。默认值为`true`
+  bool resizeToAvoidBottomInset,
+  bool primary: true,
+  DragStartBehavior drawerDragStartBehavior: DragStartBehavior.start,
+  bool extendBody: false,
+  bool extendBodyBehindAppBar: false,
+  Color drawerScrimColor,
+  double drawerEdgeDragWidth,
+  bool drawerEnableOpenDragGesture: true,
+  bool endDrawerEnableOpenDragGesture: true
+})
+```
 
 示例代码：[codePen](https://codepen.io/samlau7245/pen/XWmPrZe)
 

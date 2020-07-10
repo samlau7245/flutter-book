@@ -1,19 +1,22 @@
 
-# AspectRatio(调整宽高比)
+* [AspectRatio class](https://api.flutter.dev/flutter/widgets/AspectRatio-class.html):根据设置调整子元素child的宽高比，适合用于需要固定宽高比的场景。
 
-`AspectRatio` 作用是根据设置调整子元素child的宽高比，适合用于需要固定宽高比的场景。
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XcnP3_mO_Ms" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-* [AspectRatio Class](https://api.flutter.dev/flutter/widgets/AspectRatio-class.html)
+# 构造函数
 
-使用`AspectRatio`进行布局的情况：
+```dart
+const AspectRatio({
+  Key key,
+  @required double aspectRatio, // 设置child组件的宽高比，`aspectRatio:3/2`:宽高比例为`3:2`
+  Widget child
+})
+```
 
 * `AspectRatio` 会在布局条件允许的范围内尽可能的扩展。Widget的高度是由宽度和比率决定的，类似于`BoxFit.contain`，按照固定比率去尽可能的沾满区域。
-* 如果在满足所欲呕限制条件后依然无法找到可行的尺寸，`AspectRatio`会优先适应布局限制条件，而忽略所设置的比率。
+* 如果在满足区域限制条件后依然无法找到可行的尺寸，`AspectRatio`会优先适应布局限制条件，而忽略所设置的比率。
 
-|属性|类型|描述|
-| --- | --- | --- |
-|aspectRatio|double|设置child组件的宽高比，`aspectRatio:3/2`:宽高比例为`3:2`|
-|child|Widget||
+# 示例
 
 ```dart
 import 'package:flutter/material.dart';

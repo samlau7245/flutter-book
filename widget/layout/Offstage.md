@@ -1,63 +1,46 @@
 
-# Offstage(控制是否显示组件)
+[Offstage Class](https://api.flutter.dev/flutter/widgets/Offstage-class.html) : 通过参数来控制child是否显示。
 
-`Offstage` 通过参数来控制child是否显示。
-
-|属性|类型|默认值|描述|
-| --- | --- | --- |--- |
-|offstage|bool|true|true：不显示|
+# 构造函数
 
 ```dart
-import 'package:flutter/material.dart';
+const Offstage({
+  Key key,
+  bool offstage: true, // 控制显示状态
+  Widget child
+})
+```
 
-void main() => runApp(new MyApp());
+# 示例
 
-class MyApp extends StatelessWidget {
+```dart
+class _OffstageExampleState extends State<OffstageExample> {
+  bool _offstage = true;
   @override
   Widget build(BuildContext context) {
-    final appTitle = "Offstage 控制是否展示组件示例";
-    return new MaterialApp(
-      title: 'Demo',
-      home: new MyHomePage(title: appTitle,),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  final String title;
-  MyHomePage({Key key, this.title}) : super(key: key);
-
-  @override
-  _MyHomePage createState() => _MyHomePage();
-}
-
-class _MyHomePage extends State<MyHomePage> {
-  bool offstage = true;
-  @override
-  Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
-        title: new Text(widget.title),
-      ),
-      body: new Center(
-        child: new Offstage(
-          offstage: offstage,
-          child: new Text(
-            'Show Stage',
-            style: TextStyle(fontSize: 36.0),
-          ),
-        ),
-      ),
-      floatingActionButton: new FloatingActionButton(
+    return Scaffold(
+      floatingActionButton: FloatingActionButton(
         onPressed: () {
           setState(() {
-            offstage = !offstage;
+            _offstage = !_offstage;
           });
         },
-        child: new Icon(Icons.flip),
+        child: Text("Click"),
+      ),
+      appBar: AppBar(
+        title: Text("OffstageExample"),
+      ),
+      body: Row(
+        children: [
+          Container(color: Colors.red, width: 100, height: 100),
+          Offstage(
+              offstage: _offstage,
+              child: Container(color: Colors.green, width: 100, height: 100)),
+          Container(color: Colors.blue, width: 100, height: 100),
+        ],
       ),
     );
   }
 }
 ```
-<img src="/assets/images/flutter/55.gif"/>
+<img src="/assets/images/widgets/14.gif"/>

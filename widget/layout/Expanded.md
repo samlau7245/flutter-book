@@ -1,8 +1,21 @@
 
-# Expanded(填充布局)
-
-* [Expanded (Flutter Widget of the Week)](https://www.youtube.com/watch?v=_rnZaagadyo)
 * [Expanded Class](https://api.flutter.dev/flutter/widgets/Expanded-class.html)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_rnZaagadyo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+# 构造函数
+
+```dart
+const Expanded({
+  Key key,
+  int flex: 1,
+  @required Widget child
+})
+```
+
+填充 `Row`、`Column`、`Flex`中所有 child 的空间。
+
+# 示例
 
 ```dart
 import 'package:flutter/material.dart';
