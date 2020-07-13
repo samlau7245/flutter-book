@@ -86,7 +86,7 @@
 	* [文本](/widget/Text/README.md)
 		* [☀ TextStyle](/widget/Text/TextStyle.md)
 * [painting-绘画](/painting/README.md)
-		* [☀ BoxDecoration](/painting/BoxDecoration.md)
+	* [☀ BoxDecoration](/painting/BoxDecoration.md)
 
 ## 教程
 
