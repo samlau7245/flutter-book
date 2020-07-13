@@ -2,22 +2,18 @@
 
 * [Introduction](README.md)
 
-## 教程
+## Library
+<!-- * [cupertino-iOS]()
+* [animation]()
+* [foundation]()
+* [gestures]()
+* [physics-物理]()
+* [rendering-渲染]()
+* [scheduler-线程]()
+* [semantics]()
+* [services]() -->
 
-* [命令行](/CommandLine.md)
-* [Packages](/Packages/README.md)
-	* [插件整理](/Packages/PluginsNotes.md)
-* [测试与调试](/test/README.md)
-	* [DevTools](/test/DevTools.md)
-* [系统库](/sysLibs/README.md)
-	* [☀ EdgeInsetsGeometry](/sysLibs/EdgeInsetsGeometry.md)
-	* [☀ AlignmentGeometry](/sysLibs/AlignmentGeometry.md)
-	* [☀ BoxConstraints](/sysLibs/BoxConstraints.md)
-	* [☀ BoxFit](/sysLibs/BoxFit.md)
-
-## Widget
-
-* [Widget](/widget/README.md)
+* [widgets](/widget/README.md)
 	* [基础](/widget/basic/README.md)
 		* [MaterialApp](/widget/basic/MaterialApp.md)
 		* [?-CustomScrollView](/widget/basic/CustomScrollView.md)
@@ -33,6 +29,7 @@
 		* [Navigator(顶部导航)](/widget/navigation/Navigator.md)
 		* [☀ NavigationRail](/widget/navigation/NavigationRail.md)
 		* [☀ NavigationRailDestination](/widget/navigation/NavigationRailDestination.md)
+		* [☀ Tab(水平选项卡)](/widget/navigation/Tab.md)
 		* [☀ TabBar(水平选项卡)](/widget/navigation/TabBar.md)
 		* [☀ TabBarView](/widget/navigation/TabBarView.md)
 		* [☀ TabController](/widget/navigation/TabController.md)
@@ -88,7 +85,21 @@
 		* [DataTable](/widget/table/DataTable.md)
 	* [文本](/widget/Text/README.md)
 		* [☀ TextStyle](/widget/Text/TextStyle.md)
-		* [☀ BoxDecoration](/widget/Text/BoxDecoration.md)
+* [painting-绘画](/painting/README.md)
+		* [☀ BoxDecoration](/painting/BoxDecoration.md)
+
+## 教程
+
+* [命令行](/CommandLine.md)
+* [Packages](/Packages/README.md)
+	* [插件整理](/Packages/PluginsNotes.md)
+* [测试与调试](/test/README.md)
+	* [DevTools](/test/DevTools.md)
+* [系统库](/sysLibs/README.md)
+	* [☀ EdgeInsetsGeometry](/sysLibs/EdgeInsetsGeometry.md)
+	* [☀ AlignmentGeometry](/sysLibs/AlignmentGeometry.md)
+	* [☀ BoxConstraints](/sysLibs/BoxConstraints.md)
+	* [☀ BoxFit](/sysLibs/BoxFit.md)
 
 ## Dart
 

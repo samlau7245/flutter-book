@@ -6,8 +6,8 @@
 ```dart
 const Tab({
 	Key key,
-	String text,
-	Widget icon,
+	String text, // Tab图标
+	Widget icon, // Tab文本
 	EdgeInsetsGeometry iconMargin: const EdgeInsets.only(bottom: 10.0),
 	Widget child
 })

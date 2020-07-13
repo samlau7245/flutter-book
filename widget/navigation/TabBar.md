@@ -6,41 +6,25 @@
 ```dart
 const TabBar({
   Key key,
-  @required List<Widget> tabs,
+  @required List<Widget> tabs, // Tab选项列表，建议不要放太多项，否则用户操作起来不方便
   TabController controller, // 如果 TabController 没有提供，那默认会使用 DefaultTabController
-  bool isScrollable: false,
-  Color indicatorColor,
-  double indicatorWeight: 2.0,
-  EdgeInsetsGeometry indicatorPadding: EdgeInsets.zero,
-  Decoration indicator,
-  TabBarIndicatorSize indicatorSize,
-  Color labelColor,
-  TextStyle labelStyle,
-  EdgeInsetsGeometry labelPadding,
-  Color unselectedLabelColor,
-  TextStyle unselectedLabelStyle,
+  bool isScrollable: false, // 是否可以水平移动
+  Color indicatorColor,//指示器颜色
+  double indicatorWeight: 2.0,//指示器高度
+  EdgeInsetsGeometry indicatorPadding: EdgeInsets.zero,//底部指示器的Padding
+  Decoration indicator,//指示器decoration，例如边框等
+  TabBarIndicatorSize indicatorSize,//指示器大小计算方式
+  Color labelColor,//选中label颜色
+  TextStyle labelStyle,//选中label的Style
+  EdgeInsetsGeometry labelPadding,//每个label的padding值
+  Color unselectedLabelColor,//未选中label颜色
+  TextStyle unselectedLabelStyle,//未选中label的Style
   DragStartBehavior dragStartBehavior: DragStartBehavior.start,
   ValueChanged<int> onTap
 })
 ```
 
-# [TabBar(水平选项卡及视图组件)](https://api.flutter.dev/flutter/material/TabBar-class.html)
-`TabBar`通常需要配套Tab选项组件以及`TabBarView`页面视图组件一起使用。
-
-|TabBar属性|类型|说明|
-| --- | --- | --- |
-|isScrollable|bool|是否可以水平移动|
-|tabs|`List<Widget>`|Tab选项列表，建议不要放太多项，否则用户操作起来不方便|
-
-|Tab属性|类型|说明|
-| --- | --- | --- |
-|icon|Widget|Tab图标|
-|text|String|Tab文本|
-
-|TabBarView属性|类型|说明|
-| --- | --- | --- |
-|controller|TabController|指定视图的控制器|
-|children|`List<Widget>`|视图组件的child为一个列表，一个选项卡对应一个视图|
+# 示例
 
 ```dart
 import 'package:flutter/material.dart';
@@ -172,3 +156,66 @@ class SelectedView extends StatelessWidget {
 
 <img src="/assets/images/flutter/18.png" width = "25%" height = "25%"/>
 
+### 示例2
+
+```dart
+class _AppBarExample01State extends State<AppBarExample02>
+    with SingleTickerProviderStateMixin {
+  TabController _tabController;
+  List<Tab> tabs = [];
+
+  @override
+  void initState() {
+    tabs = <Tab>[
+      Tab(text: "Tab1"),
+      Tab(text: "Tab2"),
+      Tab(text: "Tab3"),
+      Tab(text: "Tab4"),
+      Tab(text: "Tab5"),
+      Tab(text: "Tab6"),
+      Tab(text: "Tab7"),
+      Tab(text: "Tab8"),
+      Tab(
+        text: "Tab9",
+        icon: Icon(Icons.phone),
+      )
+    ];
+
+    _tabController =
+        TabController(initialIndex: 2, length: tabs.length, vsync: this);
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("AppBarExample02"),
+        bottom: TabBar(
+          tabs: tabs,
+          controller: _tabController,
+          isScrollable: true,
+        ),
+      ),
+      body: TabBarView(
+        children: tabs
+            .map((Tab tab) => Container(
+                  child: Center(
+                    child: Text(tab.text),
+                  ),
+                ))
+            .toList(),
+        controller: _tabController,
+      ),
+    );
+  }
+
+  @override
+  void dispose() {
+    _tabController.dispose();
+    super.dispose();
+  }
+}
+```
+
+<img src="/assets/images/widgets/16.png"/>

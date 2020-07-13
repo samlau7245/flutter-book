@@ -156,7 +156,3 @@ class _SecondPage extends State<SecondPage> {
   }
 }
 ```
-
-# 资料
-
-* [SliverAppBar(应用按钮组件)](https://api.flutter.dev/flutter/material/SliverAppBar-class.html)
