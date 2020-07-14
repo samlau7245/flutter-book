@@ -2,6 +2,12 @@
 
 * [Introduction](README.md)
 
+---
+
+* [Packages](/Packages/README.md)
+	* [Packages 使用](/Packages/packages.md)
+	* [插件整理](/Packages/PluginsNotes.md)
+
 ## Library
 
 * [widgets](/widget/README.md)
@@ -78,27 +84,27 @@
 		* [☀ TextStyle](/widget/Text/TextStyle.md)
 * [painting-绘画](/painting/README.md)
 	* [☀ BoxDecoration](/painting/BoxDecoration.md)
+	* [☀ EdgeInsetsGeometry](/painting/EdgeInsetsGeometry.md)
+	* [☀ AlignmentGeometry](/painting/AlignmentGeometry.md)
+	* [☀ BoxFit](/painting/BoxFit.md)
+* [rendering-渲染](/rendering/README.md)
+	* [☀ BoxConstraints](/rendering/BoxConstraints.md)
+
+<!-- 
 * [animation(TO DO)]()
 * [foundation(TO DO)]()
 * [gestures(TO DO)]()
 * [physics-物理(TO DO)]()
-* [rendering-渲染(TO DO)]()
 * [scheduler-线程(TO DO)]()
 * [semantics(TO DO)]()
-* [services(TO DO)]()
+* [services(TO DO)]() 
+-->
 
 ## 教程
 
 * [命令行](/CommandLine.md)
-* [Packages](/Packages/README.md)
-	* [插件整理](/Packages/PluginsNotes.md)
 * [测试与调试](/test/README.md)
 	* [DevTools](/test/DevTools.md)
-* [系统库](/sysLibs/README.md)
-	* [☀ EdgeInsetsGeometry](/sysLibs/EdgeInsetsGeometry.md)
-	* [☀ AlignmentGeometry](/sysLibs/AlignmentGeometry.md)
-	* [☀ BoxConstraints](/sysLibs/BoxConstraints.md)
-	* [☀ BoxFit](/sysLibs/BoxFit.md)
 
 ## Dart
 

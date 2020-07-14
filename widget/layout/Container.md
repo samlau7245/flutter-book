@@ -10,35 +10,20 @@ Container(基础布局)是一个组合的 Widget 。类似于HTML中的`<span>`�
 ```dart
 Container({
   Key key,
-  AlignmentGeometry alignment,
-  EdgeInsetsGeometry padding,
-  Color color,
-  Decoration decoration,
-  Decoration foregroundDecoration,
+  AlignmentGeometry alignment, // 控制 child 的对齐方式，如果 Container或者 Container父节点尺寸大于 child 的尺寸，这个属性设置会起作用，有很多种对齐方式
+  EdgeInsetsGeometry padding, // 填充属性， Decoration **内部**的空白区域，如果有 child的话，child位于padding 内部
+  Color color, // 用来设置 Container背景色，如果 foregroundDecoration 设置的话，可能会遮盖 color效果
+  Decoration decoration, // 给Container添加一些装饰，比如形状、颜色...，设置了 Decoration 的话，就不能设置 color属性，否则会报错，此时应该在 Decoration 中进行颜色的设置
+  Decoration foregroundDecoration, // 绘制在 child前面的装饰
   double width,
   double height,
-  BoxConstraints constraints,
-  EdgeInsetsGeometry margin,
-  Matrix4 transform,
+  BoxConstraints constraints, // 添加到 child上额外的约束条件
+  EdgeInsetsGeometry margin, // 边距属性，围绕在 Decoration 和 child 之外的空白区域，不属于内容区域
+  Matrix4 transform, // 设置 Container 的变换矩阵，类型为 Matrix4
   Widget child,
   Clip clipBehavior: Clip.none
 )}
 ```
-
-| 属性 | 类型 | 说明 |
-| --- | --- | --- |
-|key | Key|Container 唯一标识符，用于查找更新|
-|alignment | AlignmentGeometry|控制 child 的对齐方式，如果 Container或者 Container父节点尺寸大于 child 的尺寸，这个属性设置会起作用，有很多种对齐方式|
-|padding | EdgelnsetsGeometry|填充， Decoration **内部**的空白区域，如果有 child的话，child位于padding 内部|
-|margin  | EdgelnsetsGeometry |边距属性，围绕在 Decoration 和 child 之外的空白区域，不属于内容区域|
-|color | Color|用来设置 Container背景色，如果 foregroundDecoration设置的话，可能会遮盖 color效果|
-|decoration | Decoration|给Container添加一些装饰，比如形状、颜色...，设置了 Decoration 的话，就不能设置 color属性，否则会报错，此时应该在 Decoration 中进行颜色的设置|
-|foregroundDecoration | Decoration |绘制在 child前面的装饰|
-|width | double|Container 的宽度，设置为 double.infinity可以强制在宽度上撑满，不设置，撑满则根据 child 和父节点两者一起布局|
-|height | double|Container的高度，设置为 double.infinity即可以 强制在高度上撑满|
-|constraints | [BoxConstraints](https://api.flutter.dev/flutter/widgets/Container-class.html) |添加到 child上额外的约束条件|
-|transform  | [Matrix4](https://api.flutter.dev/flutter/vector_math_64/Matrix4-class.html)|设置 Container 的变换矩阵，类型为 Matrix4|
-|child | Widget|Container 中的内容 Widget|
 
 # 示例
 
