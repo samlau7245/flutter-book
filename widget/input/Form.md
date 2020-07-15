@@ -1,4 +1,98 @@
 
+[Form Class](https://api.flutter.dev/flutter/widgets/Form/Form.html)
+
+# 构造函数
+
+```dart
+const Form({
+  Key key,
+  @required Widget child,
+  bool autovalidate: false, // 是否自动校验输入内容
+  WillPopCallback onWillPop,
+  VoidCallback onChanged // Form中的内容发生变化的时候会触发此方法。
+})
+```
+
+# 示例
+
+```dart
+class _FormExampleState extends State<FormExample> {
+  @override
+  Widget build(BuildContext context) {
+    GlobalKey _formKey = new GlobalKey<FormState>();
+
+    FocusNode focusNodeName = FocusNode();
+    FocusNode focusNodePassword = FocusNode();
+
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("FormExample"),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: Form(
+          key: _formKey,
+          child: Column(
+            children: [
+              TextFormField(
+                onEditingComplete: () {
+                  focusNodePassword.requestFocus();
+                },
+                focusNode: focusNodeName,
+                decoration: InputDecoration(
+                  labelText: "用户名：",
+                  icon: Icon(Icons.person),
+                ),
+                validator: (String value) {
+                  return value.trim().length > 0 ? null : "用户名不能为空";
+                },
+              ),
+              TextFormField(
+                obscureText: true,
+                focusNode: focusNodePassword,
+                decoration: InputDecoration(
+                  labelText: "密码：",
+                  icon: Icon(Icons.lock),
+                ),
+                validator: (String value) {
+                  return value.trim().length > 6 ? null : "密码不能少于6位";
+                },
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 30.0),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: RaisedButton(
+                        padding: EdgeInsets.all(15.0),
+                        onPressed: () {
+                          // 失去焦点，收起键盘。
+                          focusNodeName.unfocus();
+                          focusNodePassword.unfocus();
+
+                          if ((_formKey.currentState as FormState).validate()) {
+                            print("校验通过！");
+                          }
+                        },
+                        child: Text("登录"),
+                        textColor: Colors.white,
+                        color: Theme.of(context).primaryColor,
+                      ),
+                    ),
+                  ],
+                ),
+              )
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+```
+
+<img src="/assets/images/widgets/28.png"/>
+
 # [Form(表格)](https://api.flutter.dev/flutter/widgets/Form-class.html)
 
 表格类，可以通过[Cookbook-Forms](https://flutter.dev/docs/cookbook/forms)来初步实现Form的创建；其中涉及到的Widget有：[FormField](https://api.flutter.dev/flutter/widgets/FormField-class.html)、[TextFormField](https://api.flutter.dev/flutter/material/TextFormField-class.html)、[DropdownButtonFormField](https://api.flutter.dev/flutter/material/DropdownButtonFormField-class.html)、[EditableText](https://api.flutter.dev/flutter/widgets/EditableText-class.html)、[InputDatePickerFormField](https://api.flutter.dev/flutter/material/InputDatePickerFormField-class.html)。
