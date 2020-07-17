@@ -4,9 +4,18 @@
 
 ---
 
+## 教程
+
+* [教程](/tutorial/README.md)
+	* [组件化](/tutorial/module.md)
+	* [适配](/tutorial/adapter.md)
+	* [命令行](/tutorial/CommandLine.md)
 * [Packages](/Packages/README.md)
 	* [Packages 使用](/Packages/packages.md)
 	* [插件整理](/Packages/PluginsNotes.md)
+* [测试与调试](/test/README.md)
+	* [DevTools](/test/DevTools.md)
+	* [问题收集](/test/issue.md)
 
 ## Library
 
@@ -119,14 +128,12 @@
 * [semantics(TO DO)]()
 -->
 
-## 教程
-
-* [命令行](/CommandLine.md)
-* [测试与调试](/test/README.md)
-	* [DevTools](/test/DevTools.md)
-
 ## Dart
 
 * [Dart 学习](/dart/README.md)
 	* [内建类型](/dart/sysType/README.md)
 		* [String](/dart/sysType/String.md)
+	* [异步](/dart/async/README.md)
+	* [函数](/dart/function.md)
+* [Dart.io](/dart_io/README.md)
+	* [Platform](/dart_io/Platform.md)

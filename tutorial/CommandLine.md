@@ -42,7 +42,24 @@ upgrade           # 更新 Flutter
 version           # 查看 Flutter 版本
 ```
 
-## creat
+# channel
+
+```sh
+# 查看所有channel
+% flutter channel  
+# Flutter channels:
+# * master
+#   dev
+#   beta
+#   stable
+
+# 切换分支
+% flutter stable
+% git pull
+% stable upgrade
+```
+
+# create
 
 ```sh
     --platforms # 平台：[ios (default), android (default), windows (default), linux (default), macos (default), web (default)]
@@ -60,7 +77,30 @@ version           # 查看 Flutter 版本
 -a, --android-language # 指定 Android 的语言 [java, kotlin (default)]
 ```
 
+# pub
 
+```sh
+cache      #Work with the Pub system cache.
+deps       #Print package dependencies.
+downgrade  #Downgrade packages in a Flutter project.
+get        #Get packages in a Flutter project.
+global     #Work with Pub global packages.
+outdated   #Analyze dependencies to find which ones can be upgraded.
+pub        #Pass the remaining arguments to Dart's "pub" tool.
+publish    #Publish the current package to pub.dev
+run        #Run an executable from a package.
+test       #Run the "test" package.
+upgrade    #Upgrade packages in a Flutter project.
+uploader   #Manage uploaders for a package on pub.dev.
+version    #Print Pub version.
+```
+
+## cache
+
+```sh
+# 对系统缓存中的软件包执行干净的重新安装
+% flutter pub cache repare
+```
 
 
 

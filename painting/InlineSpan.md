@@ -1,5 +1,5 @@
 
-[TextSpan Class](https://api.flutter.dev/flutter/painting/TextSpan-class.html)
+* [TextSpan Class](https://api.flutter.dev/flutter/painting/TextSpan-class.html)
 
 # 构造函数
 
