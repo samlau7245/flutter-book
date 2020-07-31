@@ -12,7 +12,15 @@
 * [思否社区 Flutter 技术问答](https://segmentfault.com/t/flutter)
 * [掘金社区 Flutter 专栏](https://juejin.im/tag/Flutter)
 * [FlutterDouBan-Github](https://github.com/kaina404/FlutterDouBan)
+* [flutter widget livebook](https://flutter-widget.live/basics/introduction)
+* [Github-博客集合整理](https://github.com/crazycodeboy/awesome-flutter-cn)
 
 # 开源项目
 
 * [推荐7个Flutter重磅开源项目!](https://segmentfault.com/a/1190000023237473?utm_source=tag-newest)
+
+## Desktop
+
+* [YouTube-Flutter Web Tutorial (Setup and Make a dashboard project)](https://www.youtube.com/watch?v=O78Y80gSjTg&t=887s)
+* [YouTube-flutter dashboard web](https://www.youtube.com/results?search_query=flutter+dashboard+web)
+* [Github-flutter_admin](https://github.com/cairuoyu/flutter_admin)

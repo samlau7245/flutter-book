@@ -1,3 +1,23 @@
+
+[Card Class](https://api.flutter.dev/flutter/material/Card-class.html)
+
+# 构造函数
+
+```dart
+const Card({
+  Key key,
+  Color color,
+  Color shadowColor,
+  double elevation,
+  ShapeBorder shape,
+  bool borderOnForeground: true,
+  EdgeInsetsGeometry margin,
+  Clip clipBehavior,
+  Widget child,
+  bool semanticContainer: true
+})
+```
+
 # [Card(卡片组件)](https://api.flutter.dev/flutter/material/Card-class.html)
 
 Card(卡片组件)内容可以由大多数类型的`Widget`构成，但通常与`ListTitle`搭配使用。`Card`有一个`child`属性，可以支持多个`child`的列、行、列表、网格或者其他小部件。默认情况下`Card`将其大小缩放为`0`像素。你可以使用`SizeBox`组件来限制`Card`的大小。

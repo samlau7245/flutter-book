@@ -7,6 +7,7 @@
 ## 教程
 
 * [教程](/tutorial/README.md)
+	* [使用](/tutorial/useage.md)
 	* [组件化](/tutorial/module.md)
 	* [适配](/tutorial/adapter.md)
 	* [命令行](/tutorial/CommandLine.md)
@@ -87,6 +88,7 @@
 		* [AlertDialog(提示对话框组件)](/widget/dialog/AlertDialog.md)
 		* [BottomSheet](/widget/dialog/BottomSheet.md)
 		* [SnackBar](/widget/dialog/SnackBar.md)
+		* [showDialog](/widget/dialog/showDialog.md)
 	* [输入](/widget/input/README.md)
 		* [Form(表单)](/widget/input/Form.md)
 		* [FormField(表单输入框)](/widget/input/FormField.md)
