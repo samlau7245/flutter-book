@@ -12,3 +12,5 @@ const TabBarView({
 	DragStartBehavior dragStartBehavior: DragStartBehavior.start
 })
 ```
+
+> 使用 `TabBarView` 是有条件要求的，`TabBarView` 的父 `Widget` 必须知道宽高才能布局，但是一般我们在实际项目使用的时候又不会写死宽高，因此一般我都会在一个 `Expanded` 中使用 `TabBarView`。
