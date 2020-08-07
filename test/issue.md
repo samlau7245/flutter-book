@@ -22,3 +22,13 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)
 ```
 
 > 可以尝试把`ios`、`android` 文件夹删除，然后重新创建 `flutter create .`
+
+---
+
+```sh
+pub get failed (1; Because server_manager depends on build_runner >=1.10.2 which requires SDK version >=2.10.0-0.0 <3.0.0, version solving failed.)
+```
+
+> 因为依赖的版本和SDK的版本冲突导致。可以尝试： <br>
+> 1. 把依赖的版本设置为：`build_runner: any`，执行`flutter pub get` <br>
+> 2. 在`pubspec.lock`中找到自动兼容的版本号比如：`version: "1.10.0"`，然后把`any`替换为`1.10.0`,再次执行`flutter pub get`即可。

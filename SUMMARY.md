@@ -11,12 +11,15 @@
 	* [组件化](/tutorial/module.md)
 	* [适配](/tutorial/adapter.md)
 	* [命令行](/tutorial/CommandLine.md)
+	* [数据转换](/tutorial/data_transform.md)
 * [Packages](/Packages/README.md)
 	* [Packages 使用](/Packages/packages.md)
 	* [插件整理](/Packages/PluginsNotes.md)
 * [测试与调试](/test/README.md)
 	* [DevTools](/test/DevTools.md)
 	* [问题收集](/test/issue.md)
+* [更新版本纪录](/upgrade/README.md)
+	* [flutter 1.20](/upgrade/flutter_1_20.md)
 
 ## Library
 
