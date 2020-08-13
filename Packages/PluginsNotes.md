@@ -27,12 +27,19 @@
 |[url_launcher](https://github.com/flutter/plugins/tree/master/packages/url_launcher)| | |
 |[video_player](https://github.com/flutter/plugins/tree/master/packages/video_player)| | |
 |[webview_flutter](https://github.com/flutter/plugins/tree/master/packages/webview_flutter)| | |
+|[provider](https://pub.dev/packages/provider)| 状态管理 | |
 
 # 非官方
 |插件|功能|平台|
 | --- | --- | --- |
 | [SQLite](https://pub.flutter-io.cn/packages/sqflite) |SQLite|ANDROID、IOS|
 | [flutter_datetime_picker](https://pub.flutter-io.cn/packages/flutter_datetime_picker) | 时间选择器|ANDROID、IOS、WEB|
+
+# 插件详细
+
+## provider
+
+* [YouTube-使用示例](https://www.youtube.com/watch?v=rfAzMf_Z2Rs)
 
 # 资料
 * [https://juejin.im/post/5de48586e51d455c0172baac](https://juejin.im/post/5de48586e51d455c0172baac)
