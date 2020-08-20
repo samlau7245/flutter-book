@@ -35,6 +35,7 @@
 | [SQLite](https://pub.flutter-io.cn/packages/sqflite) |SQLite|ANDROID、IOS|
 | [flutter_datetime_picker](https://pub.flutter-io.cn/packages/flutter_datetime_picker) | 时间选择器|ANDROID、IOS、WEB|
 | [flutter_webview_plugin](https://pub.dev/packages/flutter_webview_plugin) | 网页组件 |ANDROID、IOS|
+| [flutter_screenutil](https://pub.dev/packages/flutter_screenutil) | 屏幕适配 |ANDROID、IOS、WEB|
 
 # provider
 
