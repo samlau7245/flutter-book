@@ -109,6 +109,71 @@ GridView.extent({
 
 ```
 
+# 示例
+
+```dart
+Widget gridViewItem(GridItemModel itemModel) {
+    return Column(
+      children: [
+        Image.asset(itemModel.pic),
+        Text(itemModel.name),
+      ],
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('GridviewExample'),
+      ),
+      body: GridView.count(
+        crossAxisCount: 5,
+        children: list.map((GridItemModel e) {
+          return gridViewItem(e);
+        }).toList(),
+      ),
+    );
+  }
+}
+```
+
+<img src="/assets/images/widgets/36.png"/>
+
+```dart
+flutter: The overflowing RenderFlex has an orientation of Axis.vertical.
+flutter: The edge of the RenderFlex that is overflowing has been marked in the rendering with a yellow and
+flutter: black striped pattern. This is usually caused by the contents being too big for the RenderFlex.
+flutter: Consider applying a flex factor (e.g. using an Expanded widget) to force the children of the
+flutter: RenderFlex to fit within the available space instead of being sized to their natural size.
+flutter: This is considered an error condition because it indicates that there is content that cannot be
+flutter: seen. If the content is legitimately bigger than the available space, consider clipping it with a
+flutter: ClipRect widget before putting it in the flex, or using a scrollable container rather than a Flex,
+flutter: like a ListView.
+flutter: The specific RenderFlex in question is: RenderFlex#7b07d OVERFLOWING:
+flutter:   creator: Column ← RepaintBoundary ← IndexedSemantics ← NotificationListener<KeepAliveNotification> ←
+flutter:     KeepAlive ← AutomaticKeepAlive ← KeyedSubtree ← SliverGrid ← MediaQuery ← SliverPadding ← Viewport
+flutter:     ← IgnorePointer-[GlobalKey#b6ba6] ← ⋯
+flutter:   parentData: <none> (can use size)
+flutter:   constraints: BoxConstraints(w=75.0, h=75.0)
+flutter:   size: Size(75.0, 75.0)
+flutter:   direction: vertical
+flutter:   mainAxisAlignment: start
+flutter:   mainAxisSize: max
+flutter:   crossAxisAlignment: center
+flutter:   verticalDirection: down
+flutter: ◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤
+flutter: ════════════════════════════════════════════════════════════════════════════════════════════════════
+flutter: Another exception was thrown: A RenderFlex overflowed by 2.0 pixels on the bottom.
+flutter: Another exception was thrown: A RenderFlex overflowed by 19 pixels on the bottom.
+flutter: Another exception was thrown: A RenderFlex overflowed by 19 pixels on the bottom.
+flutter: Another exception was thrown: A RenderFlex overflowed by 19 pixels on the bottom.
+flutter: Another exception was thrown: A RenderFlex overflowed by 2.0 pixels on the bottom.
+flutter: Another exception was thrown: A RenderFlex overflowed by 19 pixels on the bottom.
+```
+
+可以看到布局报错，`GridView`中`child`内的布局超过了规定约束的大小。
+
 # GridView(网格列表布局)
 
 网格列表组件(GridView)：克实现多行多列的应用场景。

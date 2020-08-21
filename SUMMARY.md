@@ -49,6 +49,7 @@
 		* [DefaultTabController](/widget/navigation/DefaultTabController.md)
 		* [BottomNavigationBar(底部导航栏)](/widget/navigation/BottomNavigationBar.md)
 		* [WillPopScope(导航返回拦截)](/widget/navigation/WillPopScope.md)
+		* [AutomaticKeepAliveClientMixin(保持页面激活)](/widget/navigation/AutomaticKeepAliveClientMixin.md)
 	* [布局](/widget/layout/README.md)
 		* [Stack(绝对定位)](/widget/layout/Stack.md)
 		* [Align(绝对定位)](/widget/layout/Align.md)
@@ -160,3 +161,5 @@
 	* [函数](/dart/function.md)
 * [Dart.io](/dart_io/README.md)
 	* [Platform](/dart_io/Platform.md)
+	* [DateTime](/dart_io/DateTime.md)
+	

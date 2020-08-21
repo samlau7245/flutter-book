@@ -17,7 +17,7 @@
 |[in_app_purchase](https://github.com/flutter/plugins/tree/master/packages/in_app_purchase)| | |
 |[ios_platform_images](https://github.com/flutter/plugins/tree/master/packages/ios_platform_images)| | |
 |[local_auth](https://github.com/flutter/plugins/tree/master/packages/local_auth)| | |
-|[package_info](https://github.com/flutter/plugins/tree/master/packages/package_info)| | |
+|[package_info](https://github.com/flutter/plugins/tree/master/packages/package_info)| 获取package的信息| |
 |[path_provider](https://github.com/flutter/plugins/tree/master/packages/path_provider)| | |
 |[plugin_platform_interface](https://github.com/flutter/plugins/tree/master/packages/plugin_platform_interface)| | |
 |[quick_actions](https://github.com/flutter/plugins/tree/master/packages/quick_actions)| | |
@@ -36,6 +36,7 @@
 | [flutter_datetime_picker](https://pub.flutter-io.cn/packages/flutter_datetime_picker) | 时间选择器|ANDROID、IOS、WEB|
 | [flutter_webview_plugin](https://pub.dev/packages/flutter_webview_plugin) | 网页组件 |ANDROID、IOS|
 | [flutter_screenutil](https://pub.dev/packages/flutter_screenutil) | 屏幕适配 |ANDROID、IOS、WEB|
+| [fluttertoast](https://pub.dev/packages/fluttertoast) | toast |ANDROID、IOS|
 
 # provider
 
