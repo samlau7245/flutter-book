@@ -25,10 +25,7 @@
 * [YouTube-Flutter Web Tutorial (Setup and Make a dashboard project)](https://www.youtube.com/watch?v=O78Y80gSjTg&t=887s)
 * [YouTube-flutter dashboard web](https://www.youtube.com/results?search_query=flutter+dashboard+web)
 * [Github-flutter_admin](https://github.com/cairuoyu/flutter_admin)
-<<<<<<< HEAD
 
 # 博客
 
 * [FlutterUnit web版闪亮登场](https://juejin.im/post/6859888713980182541)
-=======
->>>>>>> ce94836616d2e2a1b14792fda7ea75babfc62534
