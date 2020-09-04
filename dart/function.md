@@ -128,3 +128,66 @@ void main(List<String> args) {
   blockG((arg1, arg2) => arg1 + arg2);
 }
 ```
+
+# 单例模式
+
+```dart
+class SingletonDemo {
+  String name;
+  static final SingletonDemo _instance = SingletonDemo._internal();
+  SingletonDemo._internal();
+  /*
+  也可以在构造函数中进行初始化操作。
+  NavigatorService._internal() {
+    print("init data");
+  }
+  */
+  factory SingletonDemo() {
+    return _instance;
+  }
+}
+```
+
+检验一下：
+
+```dart
+var s1 = SingletonDemo();
+s1.name = "A";
+var s2 = SingletonDemo();
+print(identical(s1, s2));  // true
+print(s1 == s2);   // true
+print(s2.name);   // A
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

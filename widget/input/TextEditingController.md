@@ -1,9 +1,12 @@
 
-[TextEditingController Class](https://api.flutter.dev/flutter/widgets/TextEditingController-class.html)
+* [TextEditingController Class](https://api.flutter.dev/flutter/widgets/TextEditingController-class.html)
+* [TextEditingValue Class](https://api.flutter.dev/flutter/widgets/TextEditingValue-class.html)
 
 # 构造函数
 
-## TextEditingController()
+## TextEditingController
+
+### TextEditingController()
 
 ```dart
 TextEditingController({
@@ -11,12 +14,24 @@ TextEditingController({
 })
 ```
 
-## TextEditingController.fromValue()
+### TextEditingController.fromValue()
 
 ```dart
 TextEditingController.fromValue(
 	TextEditingValue value
 )
+```
+
+## TextEditingValue
+
+```dart
+TextEditingValue({
+  String text: ''
+  TextSelection selection: const TextSelection.collapsed(offset: -1)
+  TextRange composing: TextRange.empty
+})
+
+TextEditingValue.fromJSON(Map<String, dynamic> encoded)
 ```
 
 # 属性
@@ -55,3 +70,16 @@ class _TextFieldExampleState extends State<TextFieldExample> {
   }
 }
 ```
+
+## 添加监听
+
+```dart
+TextEditingController _controller = TextEditingController();
+
+_controller.addListener(() {
+  print(_controller.text);
+});
+```
+
+
+

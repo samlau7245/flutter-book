@@ -1,0 +1,55 @@
+
+[GestureDetector Class](https://api.flutter.dev/flutter/widgets/GestureDetector-class.html)
+
+# 构造函数
+
+```dart
+GestureDetector({
+	Key key, 
+	Widget child, 
+	GestureTapDownCallback onTapDown, 
+	GestureTapUpCallback onTapUp, 
+	GestureTapCallback onTap, 
+	GestureTapCancelCallback onTapCancel, 
+	GestureTapCallback onSecondaryTap, 
+	GestureTapDownCallback onSecondaryTapDown, 
+	GestureTapUpCallback onSecondaryTapUp, 
+	GestureTapCancelCallback onSecondaryTapCancel, 
+	GestureTapCallback onDoubleTap, 
+	GestureLongPressCallback onLongPress, 
+	GestureLongPressStartCallback onLongPressStart, 
+	GestureLongPressMoveUpdateCallback onLongPressMoveUpdate, 
+	GestureLongPressUpCallback onLongPressUp, 
+	GestureLongPressEndCallback onLongPressEnd, 
+	GestureLongPressCallback onSecondaryLongPress, 
+	GestureLongPressStartCallback onSecondaryLongPressStart, 
+	GestureLongPressMoveUpdateCallback onSecondaryLongPressMoveUpdate, 
+	GestureLongPressUpCallback onSecondaryLongPressUp, 
+	GestureLongPressEndCallback onSecondaryLongPressEnd, 
+	GestureDragDownCallback onVerticalDragDown, 
+	GestureDragStartCallback onVerticalDragStart, 
+	GestureDragUpdateCallback onVerticalDragUpdate, 
+	GestureDragEndCallback onVerticalDragEnd, 
+	GestureDragCancelCallback onVerticalDragCancel, 
+	GestureDragDownCallback onHorizontalDragDown, 
+	GestureDragStartCallback onHorizontalDragStart, 
+	GestureDragUpdateCallback onHorizontalDragUpdate, 
+	GestureDragEndCallback onHorizontalDragEnd, 
+	GestureDragCancelCallback onHorizontalDragCancel, 
+	GestureForcePressStartCallback onForcePressStart, 
+	GestureForcePressPeakCallback onForcePressPeak, 
+	GestureForcePressUpdateCallback onForcePressUpdate, 
+	GestureForcePressEndCallback onForcePressEnd, 
+	GestureDragDownCallback onPanDown, 
+	GestureDragStartCallback onPanStart, 
+	GestureDragUpdateCallback onPanUpdate, 
+	GestureDragEndCallback onPanEnd, 
+	GestureDragCancelCallback onPanCancel, 
+	GestureScaleStartCallback onScaleStart, 
+	GestureScaleUpdateCallback onScaleUpdate, 
+	GestureScaleEndCallback onScaleEnd, 
+	HitTestBehavior behavior, 
+	bool excludeFromSemantics: false, 
+	DragStartBehavior dragStartBehavior: DragStartBehavior.start
+})
+```

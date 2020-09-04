@@ -5,20 +5,20 @@
 
 ```dart
 TextStyle({
-	Color color,
-	TextDecoration decoration,
-	Color decorationColor,
-	TextDecorationStyle decorationStyle,
+	Color color, 颜色 
+	TextDecoration decoration, 添加上划线，下划线，删除线 
+	Color decorationColor, 划线的颜色
+	TextDecorationStyle decorationStyle, 这个style可能控制画实线，虚线，两条线，点, 波浪线等
 	double decorationThickness,
-	FontWeight fontWeight,
-	FontStyle fontStyle,
-	TextBaseline textBaseline,
-	String fontFamily,
+	FontWeight fontWeight, 字重，加粗也用这个字段  FontWeight.w700 
+	FontStyle fontStyle,FontStyle.normal  FontStyle.italic斜体
+	TextBaseline textBaseline, 基线，两个值，字面意思是一个用来排字母的，一人用来排表意字的（类似中文）
+	String fontFamily, 字体
 	List<String> fontFamilyFallback,
-	double fontSize,
-	double letterSpacing,
-	double wordSpacing,
-	double height,
+	double fontSize,字号
+	double letterSpacing, 字符间距  就是单个字母或者汉字之间的间隔，可以是负数
+	double wordSpacing, 字间距 句字之间的间距
+	double height, 当用来Text控件上时，行高（会乘以fontSize,所以不以设置过大）
 	Locale locale,
 	Paint background,
 	Paint foreground,
@@ -26,6 +26,24 @@ TextStyle({
 	List<FontFeature> fontFeatures
 })
 ```
+
+## TextDecoration 划线
+
+<img src="/assets/images/widgets/43.png"/>
+
+## TextDecorationStyle 线样式
+
+```dart
+enum TextDecorationStyle {
+  solid, ///画一条直线
+  double, /// 画两条线
+  dotted, /// 画圆点虚线
+  dashed, /// 画破折号虚线
+  wavy /// 画波浪线
+}
+```
+
+<img src="/assets/images/widgets/44.png"/>
 
 # 示例
 

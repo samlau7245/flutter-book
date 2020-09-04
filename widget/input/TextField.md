@@ -52,6 +52,32 @@ const TextField({
 })
 ```
 
+## TextInputType
+
+```dart
+TeextInputType.text 文本
+TextInputType.datetime 调用起输入数字键盘，带 "." 和 "-" ，来输入日期和时间
+TextInputType.emailAddress 邮箱
+TextInputType.multiline 多行文本信息
+TextInputType.number 数字
+TextInputType.url url 类型
+TextInputType.visiblePassword 密码
+TextInputType.values 多种类型
+```
+
+## TextAlign
+
+```dart
+enum TextAlign {
+  left,
+  right,
+  center,
+  justify,
+  start,
+  end,
+}
+```
+
 # 示例
 
 ## 给 TextField 添加颜色

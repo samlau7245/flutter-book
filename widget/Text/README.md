@@ -1,0 +1,75 @@
+# services 
+
+TextEditingValue
+TextInput 并不是组件，而是Flutter与原生交互的服务，控制键盘的显示。`TextField`组件的`TextInputAction`属性通过此服务实现。
+TextInputClient
+TextInputConfiguration
+TextInputConnection
+TextInputFormatter
+TextInputType
+TextPosition
+TextRange
+TextSelection
+TextSelectionDelegate
+TextureAndroidViewController
+LengthLimitingTextInputFormatter
+
+TextAffinity enum
+TextCapitalization enum
+TextInputAction enum
+
+# material
+RichText
+
+EditableText 是一个基本的文本输入组件，此组件和`TextInput`一起让用户编辑输入框的内容，提供滚动、选择、光标运动，但不提供焦点管理。通常情况下我们不会直至使用此组件，而是使用Material风格的TextField组件。
+EditableTextState
+
+DefaultTextHeightBehavior
+TextHeightBehavior
+
+DefaultTextStyle 用于文本显示样式的一个控件
+DefaultTextStyleTransition TextStyle属性动画
+TextStyle
+TextStyleTween : Tween 解决了动画中 AnimationController 产生的数值的范围从 0.0 到 1.0 这样具有范围的数据，可以用 Tween 解决。
+
+TextAlign 输入文本对齐方式
+TextAlignVertical 垂直方向对齐方式
+TextDirection 文本方向
+
+TextDecoration  文本划线
+TextDecorationStyle 文本划线的线样式
+
+TextEditingController
+TextEditingValue
+
+TextField
+TextFormField
+
+Text
+TextBox
+
+TextInputType 键盘输入类型
+
+TextSpan 处理富文本 RichText中内容的样式
+TextPainter 绘制文字
+TextPosition
+TextRange
+
+TextSelection 文本复制粘贴工具
+TextSelectionControls
+TextSelectionDelegate
+TextSelectionGestureDetector
+TextSelectionGestureDetectorBuilder
+TextSelectionGestureDetectorBuilderDelegate
+TextSelectionOverlay
+
+TextTheme
+Texture
+
+TextAffinity
+TextBaseline
+TextCapitalization
+TextInputAction 是`TextField`用来实现 TextInput 功能的属性
+TextOverflow
+TextSelectionHandleType
+TextWidthBasis

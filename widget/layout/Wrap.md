@@ -3,6 +3,8 @@
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/z5iw2SeFx2M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+<img src="/assets/images/widgets/40.gif"/>
+
 # 构造函数
 
 ```dart

@@ -13,6 +13,8 @@
 	* [命令行](/tutorial/CommandLine.md)
 	* [数据转换](/tutorial/data_transform.md)
 	* [集成推送功能](/tutorial/messageNotification.md)
+	* [升级弹窗](/tutorial/upgrade.md)
+	* [数据持久](/tutorial/persistence.md)
 * [Packages](/Packages/README.md)
 	* [Packages 使用](/Packages/packages.md)
 	* [插件整理](/Packages/PluginsNotes.md)
@@ -22,26 +24,32 @@
 	* [问题收集](/test/issue.md)
 * [更新版本纪录](/upgrade/README.md)
 	* [flutter 1.20](/upgrade/flutter_1_20.md)
+* [面试题](/interviews/README.md)
 
 ## Library
 
 * [widgets](/widget/README.md)
 	* [基础](/widget/basic/README.md)
+		* [Material](/widget/basic/Material.md)
 		* [MaterialApp](/widget/basic/MaterialApp.md)
+		* [ThemeData(主题色)](/widget/basic/ThemeData.md)
+		* [MediaQuery(屏幕适配)](/widget/basic/MediaQuery.md)
+		* [Colors](/widget/basic/Colors.md)
 		* [InteractiveViewer](/widget/basic/InteractiveViewer.md)
 		* [Scaffold(脚手架)](/widget/basic/Scaffold.md)
 		* [Drawer(抽屉)](/widget/basic/Drawer.md)
 		* [ExpansionPanel](/widget/basic/ExpansionPanel.md)
 		* [Card(卡片组件)](/widget/basic/Card.md)
-		* [ThemeData](/widget/basic/ThemeData.md)
 		* [FocusNode(焦点)](/widget/basic/FocusNode.md)
+		* [PhysicalModel](/widget/basic/PhysicalModel.md)
+	* [路由管理](/widget/routes/README.md)
+		* [Navigator(顶部导航)](/widget/routes/Navigator.md)
+		* [NavigationRail](/widget/routes/NavigationRail.md)
+		* [NavigationRailDestination](/widget/routes/NavigationRailDestination.md)
 	* [导航](/widget/navigation/README.md)
 		* [AppBar(导航栏)](/widget/navigation/AppBar.md)
 		* [SliverAppBar(导航栏)](/widget/navigation/SliverAppBar.md)
 		* [FlexibleSpaceBar(导航栏)](/widget/navigation/FlexibleSpaceBar.md)
-		* [Navigator(顶部导航)](/widget/navigation/Navigator.md)
-		* [NavigationRail](/widget/navigation/NavigationRail.md)
-		* [NavigationRailDestination](/widget/navigation/NavigationRailDestination.md)
 		* [Tab(水平选项卡)](/widget/navigation/Tab.md)
 		* [TabBar(水平选项卡)](/widget/navigation/TabBar.md)
 		* [TabBarView](/widget/navigation/TabBarView.md)
@@ -54,15 +62,12 @@
 		* [Stack(绝对定位)](/widget/layout/Stack.md)
 		* [Align(绝对定位)](/widget/layout/Align.md)
 		* [Positioned(绝对定位)](/widget/layout/Positioned.md)
-
 		* [Column(垂直)](/widget/layout/Column.md)
 		* [Row(水平)](/widget/layout/Row.md)
 		* [Wrap(自动换行)](/widget/layout/Wrap.md)
-
 		* [Padding(内边距)](/widget/layout/Padding.md)
 		* [Center(居中)](/widget/layout/Center.md)
 		* [Baseline(基准线)](/widget/layout/Baseline.md)
-
 		* [SizedBox(设置具体尺寸)](/widget/layout/SizedBox.md)
 		* [LimitedBox(限定最大宽高)](/widget/layout/LimitedBox.md)
 		* [ConstrainedBox(限定最大最小宽度)](/widget/layout/ConstrainedBox.md)
@@ -70,13 +75,11 @@
 		* [FittedBox(缩放)](/widget/layout/FittedBox.md)
 		* [FractionallySizedBox(百分比)](/widget/layout/FractionallySizedBox.md)
 		* [AspectRatio(调整宽高比)](/widget/layout/AspectRatio.md)
-
 		* [Flexible(自适应)](/widget/layout/Flexible.md)
 		* [Spacer(空格)](/widget/layout/Spacer.md)
 		* [Expanded(填充)](/widget/layout/Expanded.md)
 		* [Container(容器)](/widget/layout/Container.md)
 		* [Offstage(控制是否显示)](/widget/layout/Offstage.md)
-
 		* [Transform(矩阵转换)](/widget/layout/Transform.md)
 		* [LayoutBuilder(布局构造器)](/widget/layout/LayoutBuilder.md)
 	* [按钮](/widget/button/README.md)
@@ -124,6 +127,12 @@
 		* [ClipPath](/widget/clip/ClipPath.md)
 		* [ClipRect](/widget/clip/ClipRect.md)
 		* [ClipRRect](/widget/clip/ClipRRect.md)
+	* [手势](/widget/gestures/README.md)
+		* [GestureDetector](/widget/gestures/GestureDetector.md)
+	* [监听](/widget/Notification/README.md)
+		* [NotificationListener](/widget/Notification/NotificationListener.md)
+		* [Notification](/widget/Notification/Notification.md)
+		* [ScrollNotification](/widget/Notification/ScrollNotification.md)
 * [painting(绘画)](/painting/README.md)
 	* [BoxDecoration](/painting/BoxDecoration.md)
 	* [EdgeInsetsGeometry](/painting/EdgeInsetsGeometry.md)
@@ -139,16 +148,6 @@
 	* [TextInputType(键盘输入类型)](/services/TextInputType.md)
 	* [TextInputAction(键盘动作)](/services/TextInputAction.md)
 	* [TextCapitalization(键盘动作)](/services/TextCapitalization.md)
-	
-
-<!-- 
-* [animation(TO DO)]()
-* [foundation(TO DO)]()
-* [gestures(TO DO)]()
-* [physics-物理(TO DO)]()
-* [scheduler-线程(TO DO)]()
-* [semantics(TO DO)]()
--->
 
 ## Dart
 
@@ -163,3 +162,12 @@
 	* [Platform](/dart_io/Platform.md)
 	* [DateTime](/dart_io/DateTime.md)
 	
+
+<!-- 
+* [animation(TO DO)]()
+* [foundation(TO DO)]()
+* [gestures(TO DO)]()
+* [physics-物理(TO DO)]()
+* [scheduler-线程(TO DO)]()
+* [semantics(TO DO)]()
+-->

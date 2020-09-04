@@ -11,15 +11,19 @@ const InputDecoration({
 	
 	String labelText, //用于描述输入框，例如这个输入框是用来输入用户名还是密码的，当输入框获取焦点时默认会浮动到上方，
 	TextStyle labelStyle, // 控制labelText的样式,接收一个TextStyle类型的值
+	
 	String helperText, //辅助文本，位于输入框下方，如果errorText不为空的话，则helperText不会显示
 	TextStyle helperStyle,//helperText的样式
-	int helperMaxLines, 
+
 	String hintText, //提示文本，位于输入框内部
 	TextStyle hintStyle, //hintText的样式
-	int hintMaxLines,
+
 	String errorText, //错误信息提示
 	TextStyle errorStyle, //errorText的样式
+
 	int errorMaxLines,
+	int helperMaxLines, 
+	int hintMaxLines,
 
 	@Deprecated('Use floatingLabelBehaviour instead. ' 'This feature was deprecated after v1.13.2.') bool hasFloatingPlaceholder: true,//labelText是否浮动，默认为true，修改为false则labelText在输入框获取焦点时不会浮动且不显示
 	FloatingLabelBehavior floatingLabelBehavior: FloatingLabelBehavior.auto,

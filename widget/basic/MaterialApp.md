@@ -1,4 +1,41 @@
+
 # [MaterialApp(应用组件)](https://api.flutter.dev/flutter/material/MaterialApp-class.html)
+
+# 构造函数
+
+```dart
+const MaterialApp({
+  Key key,
+  GlobalKey<NavigatorState> navigatorKey,
+  Widget home,
+  Map<String, WidgetBuilder> routes: const {},
+  String initialRoute,
+  RouteFactory onGenerateRoute,
+  InitialRouteListFactory onGenerateInitialRoutes,
+  RouteFactory onUnknownRoute,
+  List<NavigatorObserver> navigatorObservers: const [],
+  TransitionBuilder builder,
+  String title: '',
+  GenerateAppTitle onGenerateTitle,
+  Color color,
+  ThemeData theme,
+  ThemeData darkTheme,
+  ThemeMode themeMode: ThemeMode.system,
+  Locale locale,
+  Iterable<LocalizationsDelegate> localizationsDelegates,
+  LocaleListResolutionCallback localeListResolutionCallback,
+  LocaleResolutionCallback localeResolutionCallback,
+  Iterable<Locale> supportedLocales: const [Locale('en', 'US')],
+  bool debugShowMaterialGrid: false,
+  bool showPerformanceOverlay: false,
+  bool checkerboardRasterCacheImages: false,
+  bool checkerboardOffscreenLayers: false,
+  bool showSemanticsDebugger: false,
+  bool debugShowCheckedModeBanner: true, // 隐藏Debug标签
+  Map<LogicalKeySet, Intent> shortcuts,
+  Map<Type, Action<Intent>> actions
+})
+```
 
 |属性|类型|说明|
 | --- | --- | --- |

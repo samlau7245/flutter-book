@@ -86,3 +86,42 @@ class MyApp extends StatelessWidget {
 ```
 
 <img src="/assets/images/flutter/32.png"/>
+
+## 实现一个简单的分割线
+
+```dart
+Row(
+  mainAxisAlignment: MainAxisAlignment.spaceAround,
+  children: <Widget>[
+    Expanded(
+      child: Container(
+        margin: EdgeInsets.only(left: 20),
+        color: Color(0xffEAEAEA),
+        height: 1,
+      ),
+      flex: 1,
+    ),
+    Expanded(
+      child: Container(
+        child: Center(
+          child: Text(
+            '其他登陆方式',
+            style: TextStyle(fontSize: 12, color: Color(0xff999999)),
+          ),
+        ),
+      ),
+      flex: 1,
+    ),
+    Expanded(
+      child: Container(
+        margin: EdgeInsets.only(right: 20),
+        color: Color(0xffEAEAEA),
+        height: 1,
+      ),
+      flex: 1,
+    ),
+  ],
+)
+```
+
+<img src="/assets/images/widgets/42.png" /> 

@@ -64,6 +64,70 @@ class PaddingDemo extends StatelessWidget {
 
 <img src="/assets/images/flutter/30.png" /> 
 
+# Padding、Margin
+
+```dart
+Widget buildTile() {
+  return Container(
+    color: Colors.red,
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween, //子组件的排列方式为主轴两端对齐
+      children: <Widget>[
+        new InkWell(
+          child: new Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: Image.asset(
+                Constant.ASSETS_IMG + 'icon_close.png',
+                width: 20.0,
+                height: 20.0,
+              )),
+          onTap: () {
+            // Navigator.pop(context);
+          },
+        ),
+        new InkWell(
+          child: new Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: new Text(
+                "帮助",
+                style:
+                    new TextStyle(fontSize: 16.0, color: Color(0xff6B91BB)),
+              )),
+          onTap: () {},
+        ),
+      ],
+    ),
+  );
+}
+
+Container buildInputPass() {
+  return Container(
+    color: Colors.orange,
+    margin: const EdgeInsets.only(
+      left: 20.0,
+      top: 30.0,
+      bottom: 20,
+      right: 20.0,
+    ),
+    child: Text(
+      "请输入账号密码请输入账号密码请输入账号密码请输入账号",
+      style: TextStyle(fontSize: 24.0, color: Colors.black),
+    ),
+  );
+}
+
+ListView(
+  children: [
+    buildTile(),
+    buildInputPass(),
+  ],
+),
+```
+
+<img src="/assets/images/widgets/41.png" /> 
+
+从红色块和橙色块两个Widget的布局可以知道内边距和外边距的区别。
+
 # 资料
 
 * [Padding (Flutter Widget of the Week)](https://www.youtube.com/watch?v=oD5RtLhhubg)

@@ -1,5 +1,84 @@
 
-# [ThemeData](https://api.flutter.dev/flutter/material/ThemeData-class.html)
+[ThemeData Class](https://api.flutter.dev/flutter/material/ThemeData-class.html)
+
+# 构造函数
+
+```dart
+ThemeData({
+  Color secondaryHeaderColor, 有选定行时PaginatedDataTable标题的颜色。
+  Color textSelectionColor, 文本字段中选中文本的颜色，例如TextField。
+  Color cursorColor, 输入框光标颜色。
+  Color textSelectionHandleColor, 用于调整当前文本的哪个部分的句柄颜色。
+  Color backgroundColor,// 与primaryColor对比的颜色(例如 用作进度条的剩余部分)。
+  Color dialogBackgroundColor, Dialog元素的背景色。
+  Color indicatorColor, TabBar中选项选中的指示器颜色。
+  Color hintColor, 用于提示文本或占位符文本的颜色，例如在TextField中。
+  Color errorColor, 用于输入验证错误的颜色，例如在TextField中。
+  Color toggleableActiveColor, 用于突出显示切换Widget（如Switch，Radio和Checkbox）的活动状态的颜色。
+  Color primaryColor, App主要部分的背景色（ToolBar,TabBar等）。
+  Color primaryColorLight, primaryColor的高亮版本。
+  Color primaryColorDark, primaryColor的较暗版本。
+  Color accentColor, // 前景色（文本、按钮等）
+  Color canvasColor,// MaterialType.canvas Material的默认颜色。
+  Color scaffoldBackgroundColor, 作为Scaffold基础的Material默认颜色，典型Material应用或应用内页面的背景颜色。
+  Color bottomAppBarColor, // BottomAppBar的默认颜色
+  Color cardColor, Material被用作Card时的颜色。
+  Color dividerColor, Dividers和PopupMenuDividers的颜色，也用于ListTiles中间，和DataTables的每行中间.
+  Color focusColor, 焦点获取时的颜色，例如，一些按钮焦点、输入框焦点。
+  Color hoverColor, 点击之后徘徊中的颜色，例如，按钮长按，按住之后的颜色。
+  Color highlightColor, 用于类似墨水喷溅动画或指示菜单被选中的高亮颜色。
+  Color splashColor, 墨水喷溅的颜色。
+  Color selectedRowColor, 选中行时的高亮颜色。
+  Color unselectedWidgetColor, 用于Widget处于非活动（但已启用）状态的颜色。 例如，未选中的复选框。 通常与accentColor形成对比。
+  Color disabledColor, 用于Widget无效的颜色，无论任何状态。例如禁用复选框。
+  Color buttonColor, Material中RaisedButtons使用的默认填充色。
+
+  TextTheme textTheme, // 字体主题，包括标题、body等文字样式
+  TextTheme primaryTextTheme,
+  TextTheme accentTextTheme,
+  InputDecorationTheme inputDecorationTheme,
+  TabBarTheme tabBarTheme,
+  CardTheme cardTheme,
+  PageTransitionsTheme pageTransitionsTheme,
+  AppBarTheme appBarTheme,
+  BottomAppBarTheme bottomAppBarTheme,
+  DialogTheme dialogTheme,
+
+  ButtonThemeData buttonTheme, //按钮主题
+  ToggleButtonsThemeData toggleButtonsTheme,
+  IconThemeData iconTheme, // Icon的默认样式
+  IconThemeData primaryIconTheme,
+  IconThemeData accentIconTheme,
+  SliderThemeData sliderTheme,
+  TooltipThemeData tooltipTheme,
+  ChipThemeData chipTheme,
+  FloatingActionButtonThemeData floatingActionButtonTheme,
+  NavigationRailThemeData navigationRailTheme,
+  CupertinoThemeData cupertinoOverrideTheme,
+  SnackBarThemeData snackBarTheme,
+  BottomSheetThemeData bottomSheetTheme,
+  PopupMenuThemeData popupMenuTheme,
+  MaterialBannerThemeData bannerTheme,
+  DividerThemeData dividerTheme,
+  ButtonBarThemeData buttonBarTheme,
+  BottomNavigationBarThemeData bottomNavigationBarTheme,
+  TimePickerThemeData timePickerTheme,
+
+  Brightness brightness, Brightness类型，应用程序整体主题的亮度。 由按钮等Widget使用，以确定在不使用主色或强调色时要选择的颜色。
+  VisualDensity visualDensity,
+  MaterialColor primarySwatch,
+  Brightness primaryColorBrightness,// 主题主色的深浅色
+  Brightness accentColorBrightness, Brightness类型，accentColor的亮度。 用于确定放置在突出颜色顶部的文本和图标的颜色（例如FloatingButton上的图标）。
+  InteractiveInkFeatureFactory splashFactory, InteractiveInkFeatureFactory类型，定义InkWall和InkResponse生成的墨水喷溅的外观。
+  String fontFamily,//文字字体
+  TargetPlatform platform,  //指定平台，应用特定平台控件风格
+  MaterialTapTargetSize materialTapTargetSize, Chip等组件的尺寸主题设置，如：设置为MaterialTapTargetSize.shrinkWrap时，clip距顶部距离为0；设置为MaterialTapTargetSize.padded时距顶部有一个距离
+  bool applyElevationOverlayColor, 是否应用elevation覆盖颜色。
+  ColorScheme colorScheme, scheme组颜色，一组13种颜色，可用于配置大多数组件的颜色属性。
+  Typography typography, 用于配置TextTheme、primaryTextTheme和accentTextTheme的颜色和几何文本主题值。
+  bool fixTextFieldOutlineLabel
+})
+```
 
 ```dart
 Theme(
@@ -42,72 +121,3 @@ MaterialApp(
   ),
 )
 ```
-
-|属性名|类型|描述|
-| --- | --- |--- |
-| `brightness` | [Brightness](https://api.flutter.dev/flutter/material/Brightness-class.html) | |
-| `visualDensity` | [VisualDensity](https://api.flutter.dev/flutter/material/VisualDensity-class.html) | |
-| `primarySwatch` | [MaterialColor](https://api.flutter.dev/flutter/material/MaterialColor-class.html) | |
-| `primaryColor` | [Color](https://api.flutter.dev/flutter/material/Color-class.html) |主题色 |
-| `primaryColorBrightness` | [Brightness](https://api.flutter.dev/flutter/material/Brightness-class.html) | |
-| `primaryColorLight` | [Color](https://api.flutter.dev/flutter/material/Color-class.html) | |
-| `primaryColorDark` | [Color](https://api.flutter.dev/flutter/material/Color-class.html) | |
-| `accentColor` | [Color](https://api.flutter.dev/flutter/material/Color-class.html) |强调色 |
-| `accentColorBrightness` | [Brightness](https://api.flutter.dev/flutter/material/Brightness-class.html) | |
-| `canvasColor` | [Color](https://api.flutter.dev/flutter/material/Color-class.html) | |
-| `scaffoldBackgroundColor` | [Color](https://api.flutter.dev/flutter/material/Color-class.html) | |
-| `bottomAppBarColor` | [Color](https://api.flutter.dev/flutter/material/Color-class.html) | |
-| `cardColor` | [Color](https://api.flutter.dev/flutter/material/Color-class.html) | |
-| `dividerColor` | [Color](https://api.flutter.dev/flutter/material/Color-class.html) | |
-| `focusColor` | [Color](https://api.flutter.dev/flutter/material/Color-class.html) | |
-| `hoverColor` | [Color](https://api.flutter.dev/flutter/material/Color-class.html) | |
-| `highlightColor` | [Color](https://api.flutter.dev/flutter/material/Color-class.html) | |
-| `splashColor` | [Color](https://api.flutter.dev/flutter/material/Color-class.html) | |
-| `splashFactory` | [InteractiveInkFeatureFactory](https://api.flutter.dev/flutter/material/InteractiveInkFeatureFactory-class.html) | |
-| `selectedRowColor` | [Color](https://api.flutter.dev/flutter/material/Color-class.html) | |
-| `unselectedWidgetColor` | [Color](https://api.flutter.dev/flutter/material/Color-class.html) | |
-| `disabledColor` | [Color](https://api.flutter.dev/flutter/material/Color-class.html) | |
-| `buttonColor` | [Color](https://api.flutter.dev/flutter/material/Color-class.html) | |
-| `buttonTheme` | [ButtonThemeData](https://api.flutter.dev/flutter/material/ButtonThemeData-class.html) | |
-| `toggleButtonsTheme` | [ToggleButtonsThemeData](https://api.flutter.dev/flutter/material/ToggleButtonsThemeData-class.html) | |
-| `secondaryHeaderColor` | [Color](https://api.flutter.dev/flutter/material/Color-class.html) | |
-| `textSelectionColor` | [Color](https://api.flutter.dev/flutter/material/Color-class.html) | |
-| `cursorColor` | [Color](https://api.flutter.dev/flutter/material/Color-class.html) | |
-| `textSelectionHandleColor` | [Color](https://api.flutter.dev/flutter/material/Color-class.html) | |
-| `backgroundColor` | [Color](https://api.flutter.dev/flutter/material/Color-class.html) | |
-| `dialogBackgroundColor` | [Color](https://api.flutter.dev/flutter/material/Color-class.html) | |
-| `indicatorColor` | [Color](https://api.flutter.dev/flutter/material/Color-class.html) | |
-| `hintColor` | [Color](https://api.flutter.dev/flutter/material/Color-class.html) | |
-| `errorColor` | [Color](https://api.flutter.dev/flutter/material/Color-class.html) | |
-| `toggleableActiveColor` | [Color](https://api.flutter.dev/flutter/material/Color-class.html) | |
-| `fontFamily` | [String](https://api.flutter.dev/flutter/material/String-class.html) | |
-| `textTheme` | [TextTheme](https://api.flutter.dev/flutter/material/TextTheme-class.html) | |
-| `primaryTextTheme` | [TextTheme](https://api.flutter.dev/flutter/material/TextTheme-class.html) | |
-| `accentTextTheme` | [TextTheme](https://api.flutter.dev/flutter/material/TextTheme-class.html) | |
-| `inputDecorationTheme` | [InputDecorationTheme](https://api.flutter.dev/flutter/material/InputDecorationTheme-class.html) | |
-| `iconTheme` | [IconThemeData](https://api.flutter.dev/flutter/material/IconThemeData-class.html) | |
-| `primaryIconTheme` | [IconThemeData](https://api.flutter.dev/flutter/material/IconThemeData-class.html) | |
-| `accentIconTheme` | [IconThemeData](https://api.flutter.dev/flutter/material/IconThemeData-class.html) | |
-| `sliderTheme` | [SliderThemeData](https://api.flutter.dev/flutter/material/SliderThemeData-class.html) | |
-| `tabBarTheme` | [TabBarTheme](https://api.flutter.dev/flutter/material/TabBarTheme-class.html) | |
-| `tooltipTheme` | [TooltipThemeData](https://api.flutter.dev/flutter/material/TooltipThemeData-class.html) | |
-| `cardTheme` | [CardTheme](https://api.flutter.dev/flutter/material/CardTheme-class.html) | |
-| `chipTheme` | [ChipThemeData](https://api.flutter.dev/flutter/material/ChipThemeData-class.html) | |
-| `platform` | [TargetPlatform](https://api.flutter.dev/flutter/material/TargetPlatform-class.html) | |
-| `materialTapTargetSize` | [MaterialTapTargetSize](https://api.flutter.dev/flutter/material/MaterialTapTargetSize-class.html) | |
-| `applyElevationOverlayColor` | [bool](https://api.flutter.dev/flutter/material/bool-class.html) | |
-| `pageTransitionsTheme` | [PageTransitionsTheme](https://api.flutter.dev/flutter/material/PageTransitionsTheme-class.html) | |
-| `appBarTheme` | [AppBarTheme](https://api.flutter.dev/flutter/material/AppBarTheme-class.html) | |
-| `bottomAppBarTheme` | [BottomAppBarTheme](https://api.flutter.dev/flutter/material/BottomAppBarTheme-class.html) | |
-| `colorScheme` | [ColorScheme](https://api.flutter.dev/flutter/material/ColorScheme-class.html) | |
-| `dialogTheme` | [DialogTheme](https://api.flutter.dev/flutter/material/DialogTheme-class.html) | |
-| `floatingActionButtonTheme` | [FloatingActionButtonThemeData](https://api.flutter.dev/flutter/material/FloatingActionButtonThemeData-class.html) | |
-| `navigationRailTheme` | [NavigationRailThemeData](https://api.flutter.dev/flutter/material/NavigationRailThemeData-class.html) | |
-| `typography` | [Typography](https://api.flutter.dev/flutter/material/Typography-class.html) | |
-| `cupertinoOverrideTheme` | [CupertinoThemeData](https://api.flutter.dev/flutter/material/CupertinoThemeData-class.html) | |
-| `snackBarTheme` | [SnackBarThemeData](https://api.flutter.dev/flutter/material/SnackBarThemeData-class.html) | |
-| `bottomSheetTheme` | [BottomSheetThemeData](https://api.flutter.dev/flutter/material/BottomSheetThemeData-class.html) | |
-| `popupMenuTheme` | [PopupMenuThemeData](https://api.flutter.dev/flutter/material/PopupMenuThemeData-class.html) | |
-| `bannerTheme` | [MaterialBannerThemeData](https://api.flutter.dev/flutter/material/MaterialBannerThemeData-class.html) | |
-| `dividerTheme` | [DividerThemeData](https://api.flutter.dev/flutter/material/DividerThemeData-class.html) | |
-| `buttonBarTheme` | [ButtonBarThemeData](https://api.flutter.dev/flutter/material/ButtonBarThemeData-class.html) | |

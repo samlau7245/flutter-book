@@ -15,6 +15,7 @@
 * [flutter widget livebook](https://flutter-widget.live/basics/introduction)
 * [Github-博客集合整理](https://github.com/crazycodeboy/awesome-flutter-cn)
 * [Flutter 中文网](https://book.flutterchina.club/)
+* [Flutter开发中的一些Tips](https://juejin.im/post/6844903887208448014)
 
 # 开源项目
 
