@@ -1,0 +1,2692 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>CustomScrollView · Flutter</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Sam Lau">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-local-video/video-js.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-emphasize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="PageView.html" />
+    
+    
+    <link rel="prev" href="SingleChildScrollView.html" />
+    
+
+    
+    
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">教程</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../tutorial/">
+            
+                <a href="../../tutorial/">
+            
+                    
+                    教程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../tutorial/useage.html">
+            
+                <a href="../../tutorial/useage.html">
+            
+                    
+                    使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../../tutorial/module.html">
+            
+                <a href="../../tutorial/module.html">
+            
+                    
+                    组件化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../../tutorial/adapter.html">
+            
+                <a href="../../tutorial/adapter.html">
+            
+                    
+                    适配
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../../tutorial/CommandLine.html">
+            
+                <a href="../../tutorial/CommandLine.html">
+            
+                    
+                    命令行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../../tutorial/data_transform.html">
+            
+                <a href="../../tutorial/data_transform.html">
+            
+                    
+                    数据转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="../../tutorial/messageNotification.html">
+            
+                <a href="../../tutorial/messageNotification.html">
+            
+                    
+                    集成推送功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="../../tutorial/upgrade.html">
+            
+                <a href="../../tutorial/upgrade.html">
+            
+                    
+                    升级弹窗
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="../../tutorial/persistence.html">
+            
+                <a href="../../tutorial/persistence.html">
+            
+                    
+                    数据持久
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9" data-path="../../tutorial/refreshpage.html">
+            
+                <a href="../../tutorial/refreshpage.html">
+            
+                    
+                    刷新数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../Packages/">
+            
+                <a href="../../Packages/">
+            
+                    
+                    Packages
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../../Packages/packages.html">
+            
+                <a href="../../Packages/packages.html">
+            
+                    
+                    Packages 使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../../Packages/PluginsNotes.html">
+            
+                <a href="../../Packages/PluginsNotes.html">
+            
+                    
+                    插件整理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="../../Packages/flutter_screenutil.html">
+            
+                <a href="../../Packages/flutter_screenutil.html">
+            
+                    
+                    插件：flutter_screenutil
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../test/">
+            
+                <a href="../../test/">
+            
+                    
+                    测试与调试
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../../test/DevTools.html">
+            
+                <a href="../../test/DevTools.html">
+            
+                    
+                    DevTools
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="../../test/issue.html">
+            
+                <a href="../../test/issue.html">
+            
+                    
+                    问题收集
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../../upgrade/">
+            
+                <a href="../../upgrade/">
+            
+                    
+                    更新版本纪录
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.4.1" data-path="../../upgrade/flutter_1_20.html">
+            
+                <a href="../../upgrade/flutter_1_20.html">
+            
+                    
+                    flutter 1.20
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Library</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    widgets
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../basic/">
+            
+                <a href="../basic/">
+            
+                    
+                    基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1.1" data-path="../basic/Material.html">
+            
+                <a href="../basic/Material.html">
+            
+                    
+                    Material
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.2" data-path="../basic/MaterialApp.html">
+            
+                <a href="../basic/MaterialApp.html">
+            
+                    
+                    MaterialApp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.3" data-path="../basic/ThemeData.html">
+            
+                <a href="../basic/ThemeData.html">
+            
+                    
+                    ThemeData(主题色)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.4" data-path="../basic/MediaQuery.html">
+            
+                <a href="../basic/MediaQuery.html">
+            
+                    
+                    MediaQuery(屏幕适配)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.5" data-path="../basic/Colors.html">
+            
+                <a href="../basic/Colors.html">
+            
+                    
+                    Colors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.6" data-path="../basic/InteractiveViewer.html">
+            
+                <a href="../basic/InteractiveViewer.html">
+            
+                    
+                    InteractiveViewer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.7" data-path="../basic/Scaffold.html">
+            
+                <a href="../basic/Scaffold.html">
+            
+                    
+                    Scaffold(脚手架)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.8" data-path="../basic/Drawer.html">
+            
+                <a href="../basic/Drawer.html">
+            
+                    
+                    Drawer(抽屉)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.9" data-path="../basic/ExpansionPanel.html">
+            
+                <a href="../basic/ExpansionPanel.html">
+            
+                    
+                    ExpansionPanel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.10" data-path="../basic/Card.html">
+            
+                <a href="../basic/Card.html">
+            
+                    
+                    Card(卡片组件)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.11" data-path="../basic/FocusNode.html">
+            
+                <a href="../basic/FocusNode.html">
+            
+                    
+                    FocusNode(焦点)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.12" data-path="../basic/PhysicalModel.html">
+            
+                <a href="../basic/PhysicalModel.html">
+            
+                    
+                    PhysicalModel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.13" data-path="../basic/AppBar.html">
+            
+                <a href="../basic/AppBar.html">
+            
+                    
+                    AppBar(导航栏)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../routes/">
+            
+                <a href="../routes/">
+            
+                    
+                    路由管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.2.1" data-path="../routes/Navigator.html">
+            
+                <a href="../routes/Navigator.html">
+            
+                    
+                    Navigator(顶部导航)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.2" data-path="../routes/NavigationRail.html">
+            
+                <a href="../routes/NavigationRail.html">
+            
+                    
+                    NavigationRail
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2.3" data-path="../routes/NavigationRailDestination.html">
+            
+                <a href="../routes/NavigationRailDestination.html">
+            
+                    
+                    NavigationRailDestination
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../navigation/">
+            
+                <a href="../navigation/">
+            
+                    
+                    导航
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.3.1" data-path="../navigation/PreferredSizeWidget.html">
+            
+                <a href="../navigation/PreferredSizeWidget.html">
+            
+                    
+                    PreferredSizeWidget
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.2" data-path="../navigation/BottomNavigationBar.html">
+            
+                <a href="../navigation/BottomNavigationBar.html">
+            
+                    
+                    BottomNavigationBar(底部导航栏)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.3" data-path="../navigation/WillPopScope.html">
+            
+                <a href="../navigation/WillPopScope.html">
+            
+                    
+                    WillPopScope(导航返回拦截)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.4" data-path="../navigation/AutomaticKeepAliveClientMixin.html">
+            
+                <a href="../navigation/AutomaticKeepAliveClientMixin.html">
+            
+                    
+                    AutomaticKeepAliveClientMixin(保持页面激活)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../layout/">
+            
+                <a href="../layout/">
+            
+                    
+                    布局
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.4.1" data-path="../layout/Stack.html">
+            
+                <a href="../layout/Stack.html">
+            
+                    
+                    Stack(绝对定位)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.2" data-path="../layout/Align.html">
+            
+                <a href="../layout/Align.html">
+            
+                    
+                    Align(绝对定位)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.3" data-path="../layout/Positioned.html">
+            
+                <a href="../layout/Positioned.html">
+            
+                    
+                    Positioned(绝对定位)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.4" data-path="../layout/Column.html">
+            
+                <a href="../layout/Column.html">
+            
+                    
+                    Column(垂直)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.5" data-path="../layout/Row.html">
+            
+                <a href="../layout/Row.html">
+            
+                    
+                    Row(水平)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.6" data-path="../layout/Wrap.html">
+            
+                <a href="../layout/Wrap.html">
+            
+                    
+                    Wrap(自动换行)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.7" data-path="../layout/Padding.html">
+            
+                <a href="../layout/Padding.html">
+            
+                    
+                    Padding(内边距)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.8" data-path="../layout/Center.html">
+            
+                <a href="../layout/Center.html">
+            
+                    
+                    Center(居中)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.9" data-path="../layout/Baseline.html">
+            
+                <a href="../layout/Baseline.html">
+            
+                    
+                    Baseline(基准线)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.10" data-path="../layout/SizedBox.html">
+            
+                <a href="../layout/SizedBox.html">
+            
+                    
+                    SizedBox(设置具体尺寸)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.11" data-path="../layout/LimitedBox.html">
+            
+                <a href="../layout/LimitedBox.html">
+            
+                    
+                    LimitedBox(限定最大宽高)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.12" data-path="../layout/ConstrainedBox.html">
+            
+                <a href="../layout/ConstrainedBox.html">
+            
+                    
+                    ConstrainedBox(限定最大最小宽度)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.13" data-path="../layout/OverflowBox.html">
+            
+                <a href="../layout/OverflowBox.html">
+            
+                    
+                    OverflowBox(溢出父容器显示)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.14" data-path="../layout/FittedBox.html">
+            
+                <a href="../layout/FittedBox.html">
+            
+                    
+                    FittedBox(缩放)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.15" data-path="../layout/FractionallySizedBox.html">
+            
+                <a href="../layout/FractionallySizedBox.html">
+            
+                    
+                    FractionallySizedBox(百分比)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.16" data-path="../layout/AspectRatio.html">
+            
+                <a href="../layout/AspectRatio.html">
+            
+                    
+                    AspectRatio(调整宽高比)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.17" data-path="../layout/Flexible.html">
+            
+                <a href="../layout/Flexible.html">
+            
+                    
+                    Flexible(自适应)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.18" data-path="../layout/Spacer.html">
+            
+                <a href="../layout/Spacer.html">
+            
+                    
+                    Spacer(空格)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.19" data-path="../layout/Expanded.html">
+            
+                <a href="../layout/Expanded.html">
+            
+                    
+                    Expanded(填充)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.20" data-path="../layout/Container.html">
+            
+                <a href="../layout/Container.html">
+            
+                    
+                    Container(容器)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.21" data-path="../layout/Offstage.html">
+            
+                <a href="../layout/Offstage.html">
+            
+                    
+                    Offstage(控制是否显示)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.22" data-path="../layout/Transform.html">
+            
+                <a href="../layout/Transform.html">
+            
+                    
+                    Transform(矩阵转换)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4.23" data-path="../layout/LayoutBuilder.html">
+            
+                <a href="../layout/LayoutBuilder.html">
+            
+                    
+                    LayoutBuilder(布局构造器)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5" data-path="../button/">
+            
+                <a href="../button/">
+            
+                    
+                    按钮
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.5.1" data-path="../button/FloatingActionButton.html">
+            
+                <a href="../button/FloatingActionButton.html">
+            
+                    
+                    FloatingActionButton(悬停按钮)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5.2" data-path="../button/FlatButton.html">
+            
+                <a href="../button/FlatButton.html">
+            
+                    
+                    FlatButton(扁平按钮组件)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5.3" data-path="../button/PopupMenuButton.html">
+            
+                <a href="../button/PopupMenuButton.html">
+            
+                    
+                    PopupMenuButton(弹出菜单组件)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5.4" data-path="../dialog/Chip.html">
+            
+                <a href="../dialog/Chip.html">
+            
+                    
+                    Chip
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5.5" data-path="../button/CheckboxListTile.html">
+            
+                <a href="../button/CheckboxListTile.html">
+            
+                    
+                    CheckboxListTile(复选框)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5.6" data-path="../button/RaisedButton.html">
+            
+                <a href="../button/RaisedButton.html">
+            
+                    
+                    RaisedButton
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5.7" data-path="../button/DropdownButton.html">
+            
+                <a href="../button/DropdownButton.html">
+            
+                    
+                    DropdownButton
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.6" data-path="../dialog/">
+            
+                <a href="../dialog/">
+            
+                    
+                    弹窗
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.6.1" data-path="../dialog/SimpleDialog.html">
+            
+                <a href="../dialog/SimpleDialog.html">
+            
+                    
+                    SimpleDialog(简单对话框组件)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.6.2" data-path="../dialog/AlertDialog.html">
+            
+                <a href="../dialog/AlertDialog.html">
+            
+                    
+                    AlertDialog(提示对话框组件)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.6.3" data-path="../dialog/BottomSheet.html">
+            
+                <a href="../dialog/BottomSheet.html">
+            
+                    
+                    BottomSheet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.6.4" data-path="../dialog/SnackBar.html">
+            
+                <a href="../dialog/SnackBar.html">
+            
+                    
+                    SnackBar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.6.5" data-path="../dialog/showDialog.html">
+            
+                <a href="../dialog/showDialog.html">
+            
+                    
+                    showDialog
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.7" data-path="../input/">
+            
+                <a href="../input/">
+            
+                    
+                    输入
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.7.1" data-path="../input/Form.html">
+            
+                <a href="../input/Form.html">
+            
+                    
+                    Form(表单)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.7.2" data-path="../input/FormField.html">
+            
+                <a href="../input/FormField.html">
+            
+                    
+                    FormField(表单输入框)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.7.3" data-path="../input/DropdownButtonFormField.html">
+            
+                <a href="../input/DropdownButtonFormField.html">
+            
+                    
+                    DropdownButtonFormField(下拉菜单)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.7.4" data-path="../input/FormState.html">
+            
+                <a href="../input/FormState.html">
+            
+                    
+                    FormState(表单状态)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.7.5" data-path="../input/TextField.html">
+            
+                <a href="../input/TextField.html">
+            
+                    
+                    TextField(输入框)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.7.6" data-path="../input/InputDecoration.html">
+            
+                <a href="../input/InputDecoration.html">
+            
+                    
+                    InputDecoration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.7.7" data-path="../input/OutlineInputBorder.html">
+            
+                <a href="../input/OutlineInputBorder.html">
+            
+                    
+                    OutlineInputBorder
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.7.8" data-path="../input/UnderlineInputBorder.html">
+            
+                <a href="../input/UnderlineInputBorder.html">
+            
+                    
+                    UnderlineInputBorder
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.7.9" data-path="../input/TextEditingController.html">
+            
+                <a href="../input/TextEditingController.html">
+            
+                    
+                    TextEditingController
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.8" data-path="../Text/">
+            
+                <a href="../Text/">
+            
+                    
+                    文本
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.8.1" data-path="../Text/TextStyle.html">
+            
+                <a href="../Text/TextStyle.html">
+            
+                    
+                    TextStyle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.8.2" data-path="../Text/RichText.html">
+            
+                <a href="../Text/RichText.html">
+            
+                    
+                    RichText
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.9" data-path="../tab/">
+            
+                <a href="../tab/">
+            
+                    
+                    Tab
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.9.1" data-path="../tab/Tab.html">
+            
+                <a href="../tab/Tab.html">
+            
+                    
+                    Tab(水平选项卡)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.9.2" data-path="../tab/TabBar.html">
+            
+                <a href="../tab/TabBar.html">
+            
+                    
+                    TabBar(水平选项卡)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.9.3" data-path="../tab/TabBarView.html">
+            
+                <a href="../tab/TabBarView.html">
+            
+                    
+                    TabBarView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.9.4" data-path="../tab/TabController.html">
+            
+                <a href="../tab/TabController.html">
+            
+                    
+                    TabController
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.10" data-path="../table/">
+            
+                <a href="../table/">
+            
+                    
+                    Table
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.10.1" data-path="../table/Table.html">
+            
+                <a href="../table/Table.html">
+            
+                    
+                    Table
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.10.2" data-path="../table/DataTable.html">
+            
+                <a href="../table/DataTable.html">
+            
+                    
+                    DataTable
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.11" data-path="../list/">
+            
+                <a href="../list/">
+            
+                    
+                    List
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.11.1" data-path="../list/ListView.html">
+            
+                <a href="../list/ListView.html">
+            
+                    
+                    ListView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.11.2" data-path="../list/ListBody.html">
+            
+                <a href="../list/ListBody.html">
+            
+                    
+                    ListBody
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.11.3" data-path="../list/ListWheelScrollView.html">
+            
+                <a href="../list/ListWheelScrollView.html">
+            
+                    
+                    ListWheelScrollView(滚筒)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.11.4" data-path="../list/ListWheelChildDelegate.html">
+            
+                <a href="../list/ListWheelChildDelegate.html">
+            
+                    
+                    ListWheelChildDelegate
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.12" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Scroll
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.12.1" data-path="SingleChildScrollView.html">
+            
+                <a href="SingleChildScrollView.html">
+            
+                    
+                    SingleChildScrollView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.1.12.2" data-path="CustomScrollView.html">
+            
+                <a href="CustomScrollView.html">
+            
+                    
+                    CustomScrollView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.12.3" data-path="PageView.html">
+            
+                <a href="PageView.html">
+            
+                    
+                    PageView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.12.4" data-path="PageController.html">
+            
+                <a href="PageController.html">
+            
+                    
+                    PageController
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.12.5" data-path="GridView.html">
+            
+                <a href="GridView.html">
+            
+                    
+                    GridView(网格列表)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.12.6" data-path="ScrollPhysics.html">
+            
+                <a href="ScrollPhysics.html">
+            
+                    
+                    ScrollPhysics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.12.7" data-path="NestedScrollView.html">
+            
+                <a href="NestedScrollView.html">
+            
+                    
+                    NestedScrollView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.12.8" data-path="ScrollController.html">
+            
+                <a href="ScrollController.html">
+            
+                    
+                    ScrollController
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.13" data-path="../sliver/">
+            
+                <a href="../sliver/">
+            
+                    
+                    Sliver
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.13.1" data-path="../sliver/SliverAppBar.html">
+            
+                <a href="../sliver/SliverAppBar.html">
+            
+                    
+                    SliverAppBar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.13.2" data-path="../sliver/SliverPersistentHeader.html">
+            
+                <a href="../sliver/SliverPersistentHeader.html">
+            
+                    
+                    SliverPersistentHeader
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.13.3" data-path="../sliver/SliverList.html">
+            
+                <a href="../sliver/SliverList.html">
+            
+                    
+                    SliverList
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.13.4" data-path="../sliver/SliverGrid.html">
+            
+                <a href="../sliver/SliverGrid.html">
+            
+                    
+                    SliverGrid
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.13.5" data-path="../sliver/SliverSafeArea.html">
+            
+                <a href="../sliver/SliverSafeArea.html">
+            
+                    
+                    SliverSafeArea
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.13.6" data-path="../sliver/SliverToBoxAdapter.html">
+            
+                <a href="../sliver/SliverToBoxAdapter.html">
+            
+                    
+                    SliverToBoxAdapter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.13.7" data-path="../sliver/SliverPadding.html">
+            
+                <a href="../sliver/SliverPadding.html">
+            
+                    
+                    SliverPadding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.13.8" data-path="../sliver/SliverOverlapAbsorber.html">
+            
+                <a href="../sliver/SliverOverlapAbsorber.html">
+            
+                    
+                    SliverOverlapAbsorber
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.13.9" data-path="../sliver/FlexibleSpaceBar.html">
+            
+                <a href="../sliver/FlexibleSpaceBar.html">
+            
+                    
+                    FlexibleSpaceBar(导航栏)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.14" data-path="../refresh/">
+            
+                <a href="../refresh/">
+            
+                    
+                    刷新
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.14.1" data-path="../refresh/RefreshIndicator.html">
+            
+                <a href="../refresh/RefreshIndicator.html">
+            
+                    
+                    RefreshIndicator
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.15" data-path="../clip/">
+            
+                <a href="../clip/">
+            
+                    
+                    裁剪组件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.15.1" data-path="../clip/ClipboardStatusNotifier.html">
+            
+                <a href="../clip/ClipboardStatusNotifier.html">
+            
+                    
+                    ClipboardStatusNotifier
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.15.2" data-path="../clip/ClipContext.html">
+            
+                <a href="../clip/ClipContext.html">
+            
+                    
+                    ClipContext
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.15.3" data-path="../clip/ClipOval.html">
+            
+                <a href="../clip/ClipOval.html">
+            
+                    
+                    ClipOval
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.15.4" data-path="../clip/ClipPath.html">
+            
+                <a href="../clip/ClipPath.html">
+            
+                    
+                    ClipPath
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.15.5" data-path="../clip/ClipRect.html">
+            
+                <a href="../clip/ClipRect.html">
+            
+                    
+                    ClipRect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.15.6" data-path="../clip/ClipRRect.html">
+            
+                <a href="../clip/ClipRRect.html">
+            
+                    
+                    ClipRRect
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.16" data-path="../gestures/">
+            
+                <a href="../gestures/">
+            
+                    
+                    手势
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.16.1" data-path="../gestures/GestureDetector.html">
+            
+                <a href="../gestures/GestureDetector.html">
+            
+                    
+                    GestureDetector
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.17" data-path="../Notification/">
+            
+                <a href="../Notification/">
+            
+                    
+                    监听
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.17.1" data-path="../Notification/NotificationListener.html">
+            
+                <a href="../Notification/NotificationListener.html">
+            
+                    
+                    NotificationListener
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.17.2" data-path="../Notification/Notification.html">
+            
+                <a href="../Notification/Notification.html">
+            
+                    
+                    Notification
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.17.3" data-path="../Notification/ScrollNotification.html">
+            
+                <a href="../Notification/ScrollNotification.html">
+            
+                    
+                    ScrollNotification
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.17.4" data-path="../Notification/ScrollMetrics.html">
+            
+                <a href="../Notification/ScrollMetrics.html">
+            
+                    
+                    ScrollMetrics
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../painting/">
+            
+                <a href="../../painting/">
+            
+                    
+                    painting(绘画)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../../painting/BoxDecoration.html">
+            
+                <a href="../../painting/BoxDecoration.html">
+            
+                    
+                    BoxDecoration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../../painting/EdgeInsetsGeometry.html">
+            
+                <a href="../../painting/EdgeInsetsGeometry.html">
+            
+                    
+                    EdgeInsetsGeometry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" data-path="../../painting/AlignmentGeometry.html">
+            
+                <a href="../../painting/AlignmentGeometry.html">
+            
+                    
+                    AlignmentGeometry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" data-path="../../painting/BoxFit.html">
+            
+                <a href="../../painting/BoxFit.html">
+            
+                    
+                    BoxFit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.5" data-path="../../painting/BorderSide.html">
+            
+                <a href="../../painting/BorderSide.html">
+            
+                    
+                    BorderSide(边框侧边)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.6" data-path="../../painting/BorderRadius.html">
+            
+                <a href="../../painting/BorderRadius.html">
+            
+                    
+                    BorderRadius(边框弧度)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.7" data-path="../../painting/StrutStyle.html">
+            
+                <a href="../../painting/StrutStyle.html">
+            
+                    
+                    StrutStyle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.8" data-path="../../painting/InlineSpan.html">
+            
+                <a href="../../painting/InlineSpan.html">
+            
+                    
+                    InlineSpan
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../../rendering/">
+            
+                <a href="../../rendering/">
+            
+                    
+                    rendering(渲染)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../../rendering/BoxConstraints.html">
+            
+                <a href="../../rendering/BoxConstraints.html">
+            
+                    
+                    BoxConstraints
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../../services/">
+            
+                <a href="../../services/">
+            
+                    
+                    services
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" data-path="../../services/TextInputType.html">
+            
+                <a href="../../services/TextInputType.html">
+            
+                    
+                    TextInputType(键盘输入类型)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2" data-path="../../services/TextInputAction.html">
+            
+                <a href="../../services/TextInputAction.html">
+            
+                    
+                    TextInputAction(键盘动作)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.3" data-path="../../services/TextCapitalization.html">
+            
+                <a href="../../services/TextCapitalization.html">
+            
+                    
+                    TextCapitalization(键盘动作)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../../animation/">
+            
+                <a href="../../animation/">
+            
+                    
+                    动画-TODO
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Dart</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../dart/">
+            
+                <a href="../../dart/">
+            
+                    
+                    Dart 学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../../dart/sysType/">
+            
+                <a href="../../dart/sysType/">
+            
+                    
+                    内建类型
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1.1" data-path="../../dart/sysType/String.html">
+            
+                <a href="../../dart/sysType/String.html">
+            
+                    
+                    String
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../../dart/async/">
+            
+                <a href="../../dart/async/">
+            
+                    
+                    异步
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.2.1" data-path="../../dart/async/Future.html">
+            
+                <a href="../../dart/async/Future.html">
+            
+                    
+                    Future
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2.2" data-path="../../dart/async/FutureBuilder.html">
+            
+                <a href="../../dart/async/FutureBuilder.html">
+            
+                    
+                    FutureBuilder
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../../dart/function.html">
+            
+                <a href="../../dart/function.html">
+            
+                    
+                    函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../../dart_io/">
+            
+                <a href="../../dart_io/">
+            
+                    
+                    Dart.io
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.1" data-path="../../dart_io/Platform.html">
+            
+                <a href="../../dart_io/Platform.html">
+            
+                    
+                    Platform
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.2" data-path="../../dart_io/DateTime.html">
+            
+                <a href="../../dart_io/DateTime.html">
+            
+                    
+                    DateTime
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >CustomScrollView</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x6784;&#x9020;&#x51FD;&#x6570;"><b>1. </b>&#x6784;&#x9020;&#x51FD;&#x6570;</a></li></ul></div><a href="#&#x6784;&#x9020;&#x51FD;&#x6570;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><p><a href="https://api.flutter.dev/flutter/widgets/CustomScrollView-class.html" target="_blank">CustomScrollView Class</a></p>
+<h1 id="&#x6784;&#x9020;&#x51FD;&#x6570;"><a name="&#x6784;&#x9020;&#x51FD;&#x6570;" class="plugin-anchor" href="#&#x6784;&#x9020;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6784;&#x9020;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x6784;&#x9020;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x6784;&#x9020;&#x51FD;&#x6570;</h1>
+<pre><code class="lang-dart"><span class="hljs-keyword">const</span> CustomScrollView({
+    Key key,
+    Axis scrollDirection: Axis.vertical,
+    <span class="hljs-built_in">bool</span> reverse: <span class="hljs-keyword">false</span>,
+    ScrollController controller,
+    <span class="hljs-built_in">bool</span> primary,
+    ScrollPhysics physics,
+    <span class="hljs-built_in">bool</span> shrinkWrap: <span class="hljs-keyword">false</span>,
+    Key center,
+    <span class="hljs-built_in">double</span> anchor: <span class="hljs-number">0.0</span>,
+    <span class="hljs-built_in">double</span> cacheExtent,
+    <span class="hljs-built_in">List</span>&lt;Widget&gt; slivers: <span class="hljs-keyword">const</span> [],
+    <span class="hljs-built_in">int</span> semanticChildCount,
+    DragStartBehavior dragStartBehavior: DragStartBehavior.start
+})
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="SingleChildScrollView.html" class="navigation navigation-prev " aria-label="Previous page: SingleChildScrollView">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="PageView.html" class="navigation navigation-next " aria-label="Next page: PageView">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"CustomScrollView","level":"3.1.12.2","depth":3,"next":{"title":"PageView","level":"3.1.12.3","depth":3,"path":"widget/scroll/PageView.md","ref":"widget/scroll/PageView.md","articles":[]},"previous":{"title":"SingleChildScrollView","level":"3.1.12.1","depth":3,"path":"widget/scroll/SingleChildScrollView.md","ref":"widget/scroll/SingleChildScrollView.md","articles":[]},"dir":"ltr"},"config":{"plugins":["simple-page-toc","anchor-navigation-ex","-lunr","-search","search-plus","advanced-emoji","splitter","expandable-chapters-small","local-video","anchors","copy-code-button","alerts","include-csv","include-codeblock","ace","favicon","todo","emphasize","disqus"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"include-csv":{},"disqus":{"useIdentifier":false,"shortName":"samLau-Hua"},"emphasize":{},"ace":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"todo":{},"splitter":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"showLevel":true,"showGoTop":true,"favicon":{"shortcut":"assets/images/favicon.ico","bookmark":"assets/images/favicon.ico","appleTouch":"assets/images/favicon.ico","appleTouchMore":{"120x120":"assets/images/favicon.ico","180x180":"assets/images/favicon.ico"}},"printLog":false,"multipleH1":true,"associatedWithSummary":true,"include-codeblock":{"template":"ace"},"float":{"floatIcon":"fa fa-navicon","level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false}},"favicon":{},"alerts":{},"expandable-chapters-small":{},"local-video":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"search-plus":{}},"theme":"default","author":"Sam Lau","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Flutter","language":"zh-hans","gitbook":"*","description":"记录学习Flutter的知识点！"},"file":{"path":"widget/scroll/CustomScrollView.md","mtime":"2020-07-13T09:11:05.777Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-11T10:09:22.531Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-local-video/video.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
