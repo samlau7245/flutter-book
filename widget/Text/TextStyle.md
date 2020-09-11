@@ -18,7 +18,7 @@ TextStyle({
 	double fontSize,字号
 	double letterSpacing, 字符间距  就是单个字母或者汉字之间的间隔，可以是负数
 	double wordSpacing, 字间距 句字之间的间距
-	double height, 当用来Text控件上时，行高（会乘以fontSize,所以不以设置过大）
+	double height, 当用来Text控件上时，行高（会乘以fontSize,所以不以设置过大） lineHeight = fontSize * height
 	Locale locale,
 	Paint background,
 	Paint foreground,

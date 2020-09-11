@@ -1,47 +1,186 @@
 
-# [DataTable](https://api.flutter.dev/flutter/material/DataTable-class.html)
 
+* [DataTable](https://api.flutter.dev/flutter/material/DataTable-class.html)
 * [DataColumn](https://api.flutter.dev/flutter/material/DataColumn-class.html)
 * [DataRow](https://api.flutter.dev/flutter/material/DataRow-class.html)
+* [DataCell](https://api.flutter.dev/flutter/material/DataCell-class.html)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ktTajqbhIcY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+# 构造函数
+
+## DataTable
 
 ```dart
 DataTable({
   Key key,
-  @required this.columns,
-  this.sortColumnIndex,
-  this.sortAscending = true,
-  this.onSelectAll,
-  this.dataRowHeight = kMinInteractiveDimension,
-  this.headingRowHeight = 56.0,
-  this.horizontalMargin = 24.0,
-  this.columnSpacing = 56.0,
-  this.showCheckboxColumn = true,
-  this.dividerThickness = 1.0,
-  @required this.rows,
-});
+  @required List<DataColumn> columns,
+  @required List<DataRow> rows
 
-const DataColumn({
-  @required this.label,
-  this.tooltip,
-  this.numeric = false,
-  this.onSort,
-});
+  int sortColumnIndex, 表格显示排序图标的索引
+  bool sortAscending: true, 参数表示升序或者降序
 
-const DataRow({
-  this.key,
-  this.selected = false,
-  this.onSelectChanged,
-  @required this.cells,
-});
+  ValueSetter<bool> onSelectAll,
+  bool showCheckboxColumn: true,
 
-const DataCell(
-  this.child, {
-  this.placeholder = false,//显示缺省
-  this.showEditIcon = false,// 显示编辑按钮
-  this.onTap,
-});
-
+  double dataRowHeight: kMinInteractiveDimension,
+  double headingRowHeight: 56.0,
+  double horizontalMargin: 24.0,
+  double columnSpacing: 56.0,
+  double dividerThickness: 1.0,
+})
 ```
+
+## DataColumn
+
+```dart
+DataColumn({
+  @required Widget label, 
+  String tooltip, 
+  bool numeric: false, 默认情况下数据是左对齐的，让某一列右对齐只需设置DataColumn中numeric参数true
+  DataColumnSortCallback onSort
+})
+```
+
+## DataRow
+
+```dart
+DataRow({
+  LocalKey key, 
+  @required List<DataCell> cells
+
+  bool selected: false, 
+  ValueChanged<bool> onSelectChanged, 
+  MaterialStateProperty<Color> color, 
+})
+
+DataRow.byIndex({
+  @required List<DataCell> cells
+
+  int index, 
+  bool selected: false, 
+  ValueChanged<bool> onSelectChanged, 
+  MaterialStateProperty<Color> color, 
+})
+```
+
+## DataCell
+
+```dart
+DataCell(Widget child, {
+  bool placeholder: false, 
+  bool showEditIcon: false, 
+  VoidCallback onTap
+})
+```
+
+# 示例
+
+```dart
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    appBar: AppBar(
+      title: Text("Demo"),
+    ),
+    body: DataTable(
+      columns: [
+        DataColumn(label: Text("Column1")),
+        DataColumn(label: Text("Column2")),
+      ],
+      rows: [
+        DataRow(
+          selected: true,
+          onSelectChanged: (isSelected) {},
+          cells: [
+            DataCell(
+              Container(
+                child: Text("Cell1"),
+              ),
+            ),
+            DataCell(
+              Container(
+                child: Text("Cell2"),
+              ),
+            ),
+          ],
+        ),
+        DataRow(
+          cells: [
+            DataCell(
+              Container(
+                child: Text("Cell1"),
+              ),
+            ),
+            DataCell(
+              Container(
+                child: Text("Cell2"),
+              ),
+              showEditIcon: true,
+              onTap: () {
+                print("object");
+              },
+            ),
+          ],
+        ),
+      ],
+    ),
+  );
+}
+```
+
+<img src="/assets/images/widgets/66.png"/>
+
+## 排序
+
+```dart
+DataTable(
+  sortAscending: true,
+  sortColumnIndex: 0,
+  columns: [
+    DataColumn(
+        label: Text("Column1"),
+        onSort: (index, sort) {
+          print("$index, $sort");
+        }),
+    DataColumn(label: Text("Column2")),
+  ],
+  rows: [
+    DataRow(
+      cells: [
+        DataCell(Container(child: Text("Cell1"))),
+        DataCell(Container(child: Text("Cell2"))),
+      ],
+    ),
+    DataRow(
+      cells: [
+        DataCell(Container(child: Text("Cell1"))),
+        DataCell(Container(child: Text("Cell2"))),
+      ],
+    ),
+  ],
+)
+```
+
+<img src="/assets/images/widgets/67.png"/>
+
+## 列居右
+
+```dart
+DataTable(
+  columns: [
+    DataColumn(label: Text("Column1")),
+    DataColumn(label: Text("Column2"), numeric: true),
+  ]
+  ...
+),
+```
+
+<img src="/assets/images/widgets/68.png"/>
+
+# 其他
 
 [示例](https://codepen.io/samlau7245/pen/WNQgBQB)
 
