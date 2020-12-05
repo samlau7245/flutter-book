@@ -4,6 +4,19 @@
 
 ---
 
+## Dart
+
+* [Dart 学习](/dart/README.md)
+	* [内建类型](/dart/sysType/README.md)
+		* [String](/dart/sysType/String.md)
+	* [异步](/dart/async/README.md)
+		* [Future](/dart/async/Future.md)
+		* [FutureBuilder](/dart/async/FutureBuilder.md)
+	* [函数](/dart/function.md)
+* [Dart.io](/dart_io/README.md)
+	* [Platform](/dart_io/Platform.md)
+	* [DateTime](/dart_io/DateTime.md)
+	
 ## 教程
 
 * [教程](/tutorial/README.md)
@@ -168,19 +181,6 @@
 	* [TextInputAction(键盘动作)](/services/TextInputAction.md)
 	* [TextCapitalization(键盘动作)](/services/TextCapitalization.md)
 * [动画-TODO](/animation/README.md)
-
-## Dart
-
-* [Dart 学习](/dart/README.md)
-	* [内建类型](/dart/sysType/README.md)
-		* [String](/dart/sysType/String.md)
-	* [异步](/dart/async/README.md)
-		* [Future](/dart/async/Future.md)
-		* [FutureBuilder](/dart/async/FutureBuilder.md)
-	* [函数](/dart/function.md)
-* [Dart.io](/dart_io/README.md)
-	* [Platform](/dart_io/Platform.md)
-	* [DateTime](/dart_io/DateTime.md)
 	
 
 <!-- 
