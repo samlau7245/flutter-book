@@ -1,4 +1,4 @@
-# 平台判断
+# 平台
 
 ## Platform
 
@@ -22,6 +22,8 @@ void main() {
 
 [flutter_platform_widgets]()
 
+# 显示
+
 ## MediaQuery
 
 `MediaQuery`继承与`InheritedWidget`，所以你可以从任何一个`widget tree`中获取到`MediaQuery`。
@@ -32,6 +34,44 @@ idget build(BuildContext context) {
  final mediaQuery = MediaQuery.of(context);
 }
 ```
+
+可以根据界面的`MediaQuery.size`属性，来适配界面的变化。
+
+```dart
+@override
+Widget build(BuildContext context) {
+    final mediaQuery = MediaQuery.of(context);
+
+    if (mediaQuery.size.width > 1024) {
+      return LargeLayout();
+    }
+
+    if (mediaQuery.size.width > 332) {
+      return MediumLayout();
+    }
+
+    return SmallLayout();
+}
+```
+
+### 像素兼容
+
+```dart
+@override
+Widget build(BuildContext context) {
+    final mediaQuery = MediaQuery.of(context);
+
+    if (mediaQuery.devicePixelRatio >= 2) {
+      return HighDefinitionVideo();
+    }
+
+    return LowDefinitionVideo();
+}
+```
+
+### 界面安全区域
+
+
 
 ## Screen dimensions 屏幕的维度
 

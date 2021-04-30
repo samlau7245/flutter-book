@@ -4,7 +4,7 @@
     "description":"记录学习Flutter的知识点！",
     "language":"zh-hans",
     "styles":{
-        "website": "styles/website.css"
+        "website":"styles/website.css"
     },
     "plugins":[
         "simple-page-toc",
@@ -28,9 +28,9 @@
         "disqus"
     ],
     "pluginsConfig":{
-        "disqus": {
-        "shortName": "samLau-Hua"
-    },
+        "disqus":{
+            "shortName":"samLau-Hua"
+        },
         "simple-page-toc":{
             "maxDepth":3,
             "skipFirstH1":true
