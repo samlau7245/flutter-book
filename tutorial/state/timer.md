@@ -87,11 +87,7 @@ abstract class TimerEvent extends Equatable {
 
 class TimerStarted extends TimerEvent {
   final int duration;
-
   TimerStarted({required this.duration});
-
-  @override
-  String toString() => 'TimerStarted {duration : $duration}';
 }
 
 // TimerPaused — informs the TimerBloc that the timer should be paused.
@@ -110,9 +106,6 @@ class TimerTicked extends TimerEvent {
 
   @override
   List<Object> get props => [duration];
-
-  @override
-  String toString() => 'TimerTicked { duration: $duration }';
 }
 ```
 
@@ -132,7 +125,7 @@ abstract class TimerState extends Equatable {
   const TimerState({required this.duration});
 
   @override
-  List<Object> get props => [];
+  List<Object> get props => [duration];
 }
 
 // TimerInitial — ready to start counting down from the specified duration.
@@ -213,22 +206,34 @@ class TimerBloc extends Bloc<TimerEvent, TimerState> {
 
 ```dart
 import 'dart:async';
+
 import 'package:bloc/bloc.dart';
+import 'package:bloc_timer/ticker.dart';
 import 'package:equatable/equatable.dart';
-import 'package:flutter_timer/ticker.dart';
 
 part 'timer_event.dart';
 part 'timer_state.dart';
 
 class TimerBloc extends Bloc<TimerEvent, TimerState> {
-  final Ticker _ticker;
+  /// 1. 定义 `TimerBloc` 的初始化状态`TimerInitial`； 这个demo中，我们把计时器区间设置在[0,60]秒。
   static const int _duration = 60;
 
+  /// 2. 把 `Ticker` 依赖到构造函数中。
+  final Ticker _ticker;
+
+  /// 3. `StreamSubscription`
   StreamSubscription<int>? _tickerSubscription;
 
-  TimerBloc({required Ticker ticker})
-      : _ticker = ticker,
+  TimerBloc({required ticker})
+      : assert(ticker != null),
+        _ticker = ticker,
         super(TimerInitial(_duration));
+
+  @override
+  Future<void> close() {
+    _tickerSubscription?.cancel();
+    return super.close();
+  }
 
   @override
   void onTransition(Transition<TimerEvent, TimerState> transition) {
@@ -237,35 +242,25 @@ class TimerBloc extends Bloc<TimerEvent, TimerState> {
   }
 
   @override
-  Stream<TimerState> mapEventToState(
-    TimerEvent event,
-  ) async* {
+  Stream<TimerState> mapEventToState(TimerEvent event) async* {
+    print('mapEventToState( event: $event)');
     if (event is TimerStarted) {
-      yield* _mapTimerStartedToState(event);
-    } else if (event is TimerPaused) {
-      yield* _mapTimerPausedToState(event);
-    } else if (event is TimerResumed) {
-      yield* _mapTimerResumedToState(event);
-    } else if (event is TimerReset) {
-      yield* _mapTimerResetToState(event);
+      yield* mapEventStartedToState(event);
     } else if (event is TimerTicked) {
-      yield* _mapTimerTickedToState(event);
+      yield* mapEventTickedToState(event);
+    } else if (event is TimerPaused) {
+      yield* mapEventPausedToState(event);
+    } else if (event is TimerResumed) {
+      yield* mapEventResumedToState(event);
+    } else if (event is TimerReset) {
+      yield* mapEventResetToState(event);
     }
   }
 
-  @override
-  Stream<Transition<TimerEvent, TimerState>> transformEvents(
-      Stream<TimerEvent> events, transitionFn) {
-    return super.transformEvents(events.distinct(), transitionFn);
-  }
-
-  @override
-  Future<void> close() {
-    _tickerSubscription?.cancel();
-    return super.close();
-  }
-
-  Stream<TimerState> _mapTimerStartedToState(TimerStarted start) async* {
+  /// Event: `TimerStarted` -> State:`TimerRunInProgress`
+  /// `_tickerSubscription` 如果已经存在，先清缓存；
+  /// 监听`_ticker.tick`返回的 `Stream`流，监听到每一个 `tick` 都转换成 `TimerTicked` Event
+  Stream<TimerState> mapEventStartedToState(TimerStarted start) async* {
     yield TimerRunInProgress(start.duration);
     _tickerSubscription?.cancel();
     _tickerSubscription = _ticker
@@ -273,31 +268,35 @@ class TimerBloc extends Bloc<TimerEvent, TimerState> {
         .listen((duration) => add(TimerTicked(duration: duration)));
   }
 
-  Stream<TimerState> _mapTimerPausedToState(TimerPaused pause) async* {
-    if (state is TimerRunInProgress) {
-      _tickerSubscription?.pause();
-      yield TimerRunPause(state.duration);
-    }
+  /// Event:`TimerTicked` -> State:`TimerRunInProgress`、`TimerRunComplete`
+  /// 倒计时 >0 返回 TimerRunInProgress 状态。
+  /// 倒计时 =0 返回 TimerRunComplete 状态。
+  Stream<TimerState> mapEventTickedToState(TimerTicked event) async* {
+    yield event.duration > 0
+        ? TimerRunInProgress(event.duration)
+        : TimerRunComplete();
   }
 
-  Stream<TimerState> _mapTimerResumedToState(TimerResumed resume) async* {
+  /// Event:`TimerPaused` -> State:`TimerRunPause`
+  Stream<TimerState> mapEventPausedToState(TimerPaused event) async* {
+    _tickerSubscription?.pause();
+    yield TimerRunPause(state.duration);
+  }
+
+  /// 只有暂停的情况下才可以执行 重新开始
+  Stream<TimerState> mapEventResumedToState(TimerResumed event) async* {
     if (state is TimerRunPause) {
       _tickerSubscription?.resume();
       yield TimerRunInProgress(state.duration);
     }
   }
 
-  Stream<TimerState> _mapTimerResetToState(TimerReset reset) async* {
+  Stream<TimerState> mapEventResetToState(TimerReset event) async* {
     _tickerSubscription?.cancel();
     yield TimerInitial(_duration);
   }
-
-  Stream<TimerState> _mapTimerTickedToState(TimerTicked tick) async* {
-    yield tick.duration > 0
-        ? TimerRunInProgress(tick.duration)
-        : TimerRunComplete();
-  }
 }
+
 ```
 
 # main.dart
@@ -379,3 +378,66 @@ class _TimerState extends State<Timer> {
 
 <img src="/assets/images/tutorial/state/05.png"/>
 
+## Actions
+
+`Actions` 负责展示计时器的控制按钮：start, pause, and reset
+
+### 开始按钮
+
+```dart
+/// 按钮：start, pause, and reset
+class Actions extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: _mapStateToActionButtons(
+        timerBloc: BlocProvider.of<TimerBloc>(context),
+      ),
+    );
+  }
+
+  List<Widget> _mapStateToActionButtons({required TimerBloc timerBloc}) {
+    final state = timerBloc.state;
+
+    print(state);
+
+    if (state is TimerInitial) {
+      return [
+        FloatingActionButton(
+            onPressed: () {
+              timerBloc.add(TimerStarted(duration: state.duration));
+            },
+            child: Icon(Icons.play_arrow))
+      ];
+    }
+
+    return [];
+  }
+}
+```
+
+把`Actions`Widget放到`Timer`中： 
+
+```dart
+Widget build(BuildContext context) {
+  return Scaffold(
+    appBar: AppBar(title: Text('Timer')),
+    body: Column(
+      children: [
+        Padding(...),
+        Actions(),
+      ],
+    ),
+  );
+}
+```
+
+<img src="/assets/images/tutorial/state/06.png"/>
+
+代码:
+
+```bash
+git clone https://gitee.com/flutter-slu/examples.git
+git checkout 19b2a402d2e4c9d74f7741658143cced2e0ddbd2
+```
