@@ -58,6 +58,71 @@ Stream<Transition<TimerEvent, TimerState>> transformEvents(
 }
 ```
 
+### Bloc-data架构说明
+
+[参考文档](https://bloclibrary.dev/#/./architecture)
+
+<img src="/assets/images/tutorial/state/02.png"/>
+
+使用`bloc`库,可以让项目分为三层：
+
+* UI: 展示层
+* Bloc: 业务逻辑层
+* Data: 数据层
+  * Repository 
+  * Data Provider
+
+#### Data: 数据层
+
+数据层的责任就是从一个或者多个源中获取/操作数据。 数据层算是整个项目中的最低层，负责和数据库进行交互、请求网络和其他一些数据源的交互。
+
+##### Data Provider
+
+`Data Provider` 一般负责提供一些简单的`CURD`操作的API。
+
+```dart
+class SimpleDataProvider {
+  Future<RawData> createData() async {
+    // DB操作或者网络操作。
+    return RawData();
+  }
+
+  Future<RawData> readData() async {
+    // DB操作或者网络操作。
+    return RawData();
+  }
+
+  Future<RawData> updateData() async {
+    // DB操作或者网络操作。
+    return RawData();
+  }
+
+  Future<RawData> deleteData() async {
+    // DB操作或者网络操作。
+    return RawData();
+  }
+}
+```
+
+##### Repository
+
+`Repository` 会提供一个`wrapper`包装一个或者多个`Data Provider`。
+
+```dart
+class Repository {
+    final DataProviderA dataProviderA;
+    final DataProviderB dataProviderB;
+
+    Future<Data> getAllDataThatMeetsRequirements() async {
+        final RawDataA dataSetA = await dataProviderA.readData();
+        final RawDataB dataSetB = await dataProviderB.readData();
+
+        final Data filteredData = _filterData(dataSetA, dataSetB);
+        return filteredData;
+    }
+}
+```
+
 ## Cubit、Bloc对比
 
 > 什么时候用`Cubit`， 什么时候使用`Bloc`？
@@ -153,8 +218,17 @@ class BlocProvider<T extends BlocBase<Object?>>
 
 StatelessWidget -> BlocProviderSingleChildWidget -> BlocProvider
 
+### 构造函数
+
 ```dart
-class BlocProvider<T extends BlocBase<Object?>> extends SingleChildStatelessWidget with BlocProviderSingleChildWidget{}
+class BlocProvider<T extends BlocBase<Object?>> extends SingleChildStatelessWidget with BlocProviderSingleChildWidget {
+  BlocProvider({
+    Key? key,
+    required Create<T> create,
+    this.child,
+    this.lazy,
+  });
+}
 ```
 
 ## MultiBlocProvider
@@ -177,6 +251,157 @@ MultiBlocProvider(
   child: ChildA(),
 )
 ```
+
+## BlocListener
+
+`BlocListener` 调用`listener`来监听状态`State`的改变。一般使用的场景： `navigation`、展示`SnackBar`、 展示`Dialog`...
+
+每次状态改变时`listener`都会被调用。(**除了初始化状态**)
+
+```dart
+BlocListener<BlocA, BlocAState>(
+  listenWhen: (previous, current) {
+    // return true/false to determine whether or not
+    // to invoke listener with state
+  },
+  listener: (context, state) {
+    // do stuff here based on BlocA's state
+  }
+  child: Container(),
+)
+```
+
+代码示例：
+
+```dart
+class LoginForm extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return BlocListener<LoginBloc, LoginState>(
+      listener: (context, state) {
+        if (state.status.isSubmissionFailure) {
+          ScaffoldMessenger.of(context)
+            ..hideCurrentSnackBar()
+            ..showSnackBar(
+              SnackBar(content: Text('Authentication Failure')),
+            );
+        }
+      },
+      child: Align(
+        alignment: Alignment(0, -1 / 3),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            _UsernameInput(),
+            const Padding(padding: EdgeInsets.all(12)),
+            _PasswordInput(),
+            const Padding(padding: EdgeInsets.all(12)),
+            _LoginButton(),
+          ],
+        ),
+      ),
+    );
+  }
+}
+```
+
+### 继承关系
+
+StatefulWidget -> SingleChildStatefulWidget -> BlocListenerBase -> BlocListener
+
+### 构造函数
+
+```dart
+/// Signature for the `listener` function which takes the `BuildContext` along
+/// with the `state` and is responsible for executing in response to
+typedef BlocWidgetListener<S> = void Function(BuildContext context, S state);
+
+typedef BlocListenerCondition<S> = bool Function(S previous, S current);
+
+class BlocListener<B extends BlocBase<S>, S> extends BlocListenerBase<B, S> with BlocListenerSingleChildWidget {
+  const BlocListener({
+    Key? key,
+    required BlocWidgetListener<S> listener,
+    B? bloc,
+    BlocListenerCondition<S>? listenWhen,
+    Widget? child,
+  });
+}
+```
+
+## MultiBlocListener
+## RepositoryProvider
+
+`RepositoryProvider` Widget 提供了一个仓库或者存储的位置，让它的`children`可以通过`RepositoryProvider.of<T>(context)`来获取
+
+
+```dart
+RepositoryProvider(
+  create: (context) => RepositoryA(),
+  child: ChildA(),
+);
+```
+
+示例代码：
+
+```dart
+@override
+Widget build(BuildContext context) {
+  /// `RepositoryProvider` 的功能是： 提供一个`AuthenticationRepository`单例，给后续的逻辑使用。
+  return RepositoryProvider.value(
+    value: authenticationRepository,
+    child: BlocProvider(
+      create: (_) => AuthenticationBloc(
+        authenticationRepository: authenticationRepository,
+        userRepository: userRepository,
+      ),
+      child: AppView(),
+    ),
+  );
+}
+```
+
+### 继承关系
+
+Widget -> StatelessWidget -> SingleChildStatelessWidget -> InheritedProvider -> Provider -> RepositoryProvider
+
+### 构造函数
+
+```dart
+/// A function that creates an object of type [T].
+typedef Create<T> = T Function(BuildContext context);
+
+class RepositoryProvider<T> extends Provider<T> with RepositoryProviderSingleChildWidget {
+  
+  RepositoryProvider({
+    Key? key,
+    required Create<T> create,
+    Widget? child,
+    bool? lazy,
+  }));
+  
+  RepositoryProvider.value({
+    Key? key,
+    required T value,
+    Widget? child,
+  });
+}
+```
+
+## MultiRepositoryProvider
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

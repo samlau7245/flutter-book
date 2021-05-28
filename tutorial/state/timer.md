@@ -439,5 +439,107 @@ Widget build(BuildContext context) {
 
 ```bash
 git clone https://gitee.com/flutter-slu/examples.git
+cd examples/
 git checkout 19b2a402d2e4c9d74f7741658143cced2e0ddbd2
+```
+
+### 其他按钮
+
+```dart
+/// 按钮：start, pause, and reset
+class Actions extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: _mapStateToActionButtons(
+        timerBloc: BlocProvider.of<TimerBloc>(context),
+      ),
+    );
+  }
+
+  List<Widget> _mapStateToActionButtons({required TimerBloc timerBloc}) {
+    final state = timerBloc.state;
+
+    print('====>$state');
+
+    if (state is TimerInitial) {
+      return [
+        FloatingActionButton(
+          onPressed: () {
+            timerBloc.add(TimerStarted(duration: state.duration));
+          },
+          child: Icon(Icons.play_arrow),
+        )
+      ];
+    }
+
+    if (state is TimerRunInProgress) {
+      return [
+        FloatingActionButton(
+          onPressed: () {
+            timerBloc.add(TimerPaused());
+          },
+          child: Icon(Icons.pause),
+        ),
+        FloatingActionButton(
+          onPressed: () {
+            timerBloc.add(TimerReset());
+          },
+          child: Icon(Icons.replay),
+        )
+      ];
+    }
+    if (state is TimerRunPause) {
+      return [
+        FloatingActionButton(
+          child: Icon(Icons.play_arrow),
+          onPressed: () => timerBloc.add(TimerResumed()),
+        ),
+        FloatingActionButton(
+          child: Icon(Icons.replay),
+          onPressed: () => timerBloc.add(TimerReset()),
+        ),
+      ];
+    }
+    if (state is TimerRunComplete) {
+      return [
+        FloatingActionButton(
+          child: Icon(Icons.replay),
+          onPressed: () => timerBloc.add(TimerReset()),
+        ),
+      ];
+    }
+
+    return [];
+  }
+}
+```
+
+`Actions()`涉及到 `State` 更新，需要改造下`Timer()`组件。
+
+```dart
+Widget build(BuildContext context) {
+  return Scaffold(
+    appBar: AppBar(title: Text('Timer')),
+    body: Column(
+      children: [
+        Padding(...),
+        BlocBuilder<TimerBloc, TimerState>(
+          builder: (context, state) => Actions(),
+          buildWhen: (previousState, state) =>
+              previousState.runtimeType != state.runtimeType,
+        ),
+      ],
+    ),
+  );
+}
+```
+
+代码：
+
+```bash
+git clone https://gitee.com/flutter-slu/examples.git
+cd examples/
+git checkout fe2a41345970cc0ae99a7d0f28b8c7d4cb57a4e9
 ```
