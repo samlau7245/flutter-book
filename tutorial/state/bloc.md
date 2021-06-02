@@ -391,79 +391,60 @@ class RepositoryProvider<T> extends Provider<T> with RepositoryProviderSingleChi
 ## MultiRepositoryProvider
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# context
+
+* `context.watch`: 适用于`MultiBlocBuilder`，它可以监控多个Bloc。
+* `context.select`: 功能室渲染或者更新 WidgetTree 中的部分UI。
+* `context.read`: 直接访问`context.bloc`，然后通过 bloc 添加 Event。
+
+现在有个`Widget`： 
+
+```dart
+class TextWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return const Text('A');
+  }
+}
+```
+
+现在要在`Text`中访问 `Bloc'state`的方式： 通过`context.watch`的方式。
+
+```dart
+class TextWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    final state = context.watch<LoginBloc>().state;
+    return Text('$state');
+  }
+}
+```
+
+一种是通过`BlocBuilder`的方式：
+
+```dart
+class TextWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return BlocBuilder<LoginBloc, LoginState>(builder: (context, state) {
+      return Text('$state');
+    });
+  }
+}
+```
+
+> `context.watch` 如果在根`build`中进行监听，当 Bloc State 发生改变时，整个 WidgetTree 都会 rebuild 一次。 如果不想整个 Widget Tree rebuild，可以使用`BlocBuilder`。
+
+给 Bloc 增加 Event 可以使用`context.read`:
+
+```dart
+class TextWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () => context.read<LoginBloc>().add(const LoginSubmitted()),
+      child: const Text('Add'),
+    );
+  }
+}
+```
