@@ -112,3 +112,6 @@ output-localization-file: app_localizations.dart
 flutter pub global activate intl_translation
 flutter pub run intl_translation:extract_to_arb --output-dir=lib/l10n lib/main.dart
 ```
+
+
+* [Guide for building internationalized Flutter apps](https://docs.google.com/document/d/10e0saTfAv32OZLRmONy866vnaw0I2jwL8zukykpgWBc/edit)
