@@ -145,5 +145,3 @@ String weatherStateAbbr;
 ```
 
 把服务器下发的字段`weather_state_abbr`序列化成模型字段`weatherStateAbbr`。`unknownEnumValue` 参数是默认指派一个未知的枚举值`WeatherState.unknown`。
-
-

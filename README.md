@@ -1,9 +1,5 @@
 # Introduction
 
-> **[danger] 提示**
->
-> 如果需要评论需要梯子！
-
 # 资料
 
 * [谷歌开发者-Flutter 和桌面应用的最新进展](https://mp.weixin.qq.com/s/AfgT7jqv4m0YjFRIF5HhbA)
@@ -27,6 +23,5 @@
 * [YouTube-flutter dashboard web](https://www.youtube.com/results?search_query=flutter+dashboard+web)
 * [Github-flutter_admin](https://github.com/cairuoyu/flutter_admin)
 
-# 博客
 
-* [FlutterUnit web版闪亮登场](https://juejin.im/post/6859888713980182541)
+# TODO

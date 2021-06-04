@@ -57,6 +57,7 @@ class DevicesExample extends StatelessWidget {
 在 Web 端使用`Platform`时会抛出异常，可以使用[universal_platform](https://pub.flutter-io.cn/packages/universal_platform)。
 
 ```dart
+// flutter run -d chrome
 void initState() {
   try {
     bool devices = (Platform.isIOS || Platform.isAndroid);
@@ -68,6 +69,79 @@ void initState() {
 // 报错：===>Unsupported operation: Platform._operatingSystem
 ```
 
+```dart
+class DevicesExample extends StatelessWidget {
+  const DevicesExample({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      textDirection: DeviceType.isMacOS ? TextDirection.rtl : TextDirection.ltr,
+      children: [
+        Container(),
+      ],
+    );
+  }
+}
+
+class DeviceType {
+  // Syntax sugar, proxy the UniversalPlatform methods so our views can reference a single API
+  static bool isIOS = UniversalPlatform.isIOS;
+  static bool isAndroid = UniversalPlatform.isAndroid;
+  static bool isMacOS = UniversalPlatform.isMacOS;
+  static bool isLinux = UniversalPlatform.isLinux;
+  static bool isWindows = UniversalPlatform.isWindows;
+
+  // Higher level device class abstractions (more syntax sugar for the views)
+  static bool isWeb = UniversalPlatform.isWeb;
+  static bool get isDesktop => isWindows || isMacOS || isLinux;
+  static bool get isMobile => isAndroid || isIOS;
+  static bool get isDesktopOrWeb => isDesktop || isWeb;
+  static bool get isMobileOrWeb => isMobile || isWeb;
+}
+```
+
+### 类型统一配置
+
+为了方便统一管理Widget类型的适配，可以把类型(Padding、 Space、Shape、Font Size、Inset...)的值统一到一起进行管理
 
 
 
+```dart
+class Insets {
+  static const double xsmall = 4;
+  static const double small = 8;
+  //etc
+}
+
+class Fonts {
+  static const String raleway = 'Raleway';
+  // etc
+}
+
+class TextStyles {
+  static const TextStyle raleway = const TextStyle(fontFamily: Fonts.raleway);
+  // etc
+}
+
+class DevicesExample extends StatelessWidget {
+  const DevicesExample({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.all(Insets.small),
+      child: Text('A', style: TextStyles.raleway),
+    );
+  }
+}
+```
+
+# TODO
+
+* touch 交互
+* input 
+* mouse
+
+>* nofity
+>* listener
